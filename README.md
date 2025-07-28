@@ -1,1 +1,3 @@
-# Jorge-Zavala-D.github.io
+# CV
+# Teaching
+# Research
