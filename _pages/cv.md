@@ -10,7 +10,7 @@ description: A concise academic record of education, appointments, research, tea
 {% assign cv = site.data.cv.cv %}
 
 <!-- The theme's cache-bust tag does not fingerprint imported Sass partials. -->
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=20260726-cv2">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=20260726-cv3">
 
 <div class="cv-page">
   <section class="cv-hero" aria-labelledby="cv-profile-title">

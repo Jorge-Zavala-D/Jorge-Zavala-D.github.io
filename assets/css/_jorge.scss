@@ -897,8 +897,8 @@ nav.navbar {
 .cv-hero {
   background: var(--jz-ink);
   display: grid;
-  gap: clamp(2rem, 6vw, 5rem);
-  grid-template-columns: minmax(0, 1.4fr) minmax(250px, 0.6fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
+  grid-template-columns: minmax(0, 1.3fr) minmax(295px, 0.7fr);
   margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
   padding: clamp(2rem, 5vw, 4rem);
 }
