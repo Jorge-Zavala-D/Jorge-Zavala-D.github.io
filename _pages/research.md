@@ -163,7 +163,7 @@ nav_order: 1
     <article>
       <p class="work-card__meta"><span>Firm dynamics</span><span>Germany</span></p>
       <h3>Reallocation, Firm Dynamics, and the Advanced-Economy Trap</h3>
-      <p>Evidence from German establishment data. With Alejandro Arrieta.</p>
+      <p>Evidence from German establishment data. With Johar Arrieta.</p>
     </article>
   </div>
 </section>
