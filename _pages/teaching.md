@@ -1,15 +1,95 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
-description: Course materials, schedules, and resources for classes taught.
+title: Teaching
+description: Teaching in causal inference, economics, statistics, machine learning, and program evaluation.
 nav: true
-nav_order: 6
-calendar: true
+nav_order: 4
 ---
 
-This page displays a collection of courses with detailed schedules, materials, and resources. You can organize your courses by years, terms, or topics.
+<div class="page-intro">
+  <p class="eyebrow">Methods with a purpose</p>
+  <p class="page-intro__lede">
+    I teach quantitative methods as a way of thinking: how to turn substantive questions into
+    credible designs, make assumptions visible, and communicate evidence with precision.
+  </p>
+</div>
 
-{% include calendar.liquid calendar_id='test@gmail.com' timezone='Asia/Shanghai' %}
+<section class="teaching-feature">
+  <div>
+    <p class="section-kicker">Current</p>
+    <h2>Statistics II: Causal Inference</h2>
+    <p class="teaching-feature__place">Hertie School · Teaching Assistant · 2026–present</p>
+  </div>
+  <p>
+    Graduate instruction on potential outcomes, experiments, regression, matching,
+    difference-in-differences, instrumental variables, and regression discontinuity—with an
+    emphasis on translating identification arguments into transparent empirical work.
+  </p>
+</section>
 
-{% include courses.liquid %}
+<section class="teaching-section">
+  <p class="section-kicker">University teaching</p>
+  <h2>Courses</h2>
+  <div class="course-groups">
+    <article>
+      <div class="course-groups__heading">
+        <h3>University of Chicago</h3>
+        <span>2022–24</span>
+      </div>
+      <p class="quiet">Graduate Teaching Assistant, Harris School of Public Policy and Center for the Economics of Human Development</p>
+      <ul class="course-list">
+        <li>Program Evaluation</li>
+        <li>Advanced Statistics II</li>
+        <li>Data Analytics II</li>
+        <li>Modern Survey Research</li>
+        <li>Advanced Microeconomics for Public Policy</li>
+        <li>Economics for Public Policy</li>
+        <li>Math and Coding Camp</li>
+      </ul>
+    </article>
+    <article>
+      <div class="course-groups__heading">
+        <h3>Universidad del Pacífico</h3>
+        <span>2016–17</span>
+      </div>
+      <p class="quiet">Undergraduate Teaching Assistant</p>
+      <ul class="course-list">
+        <li>Econometrics I</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="teaching-section">
+  <p class="section-kicker">Professional instruction</p>
+  <h2>Applied methods</h2>
+  <div class="workshop-list">
+    <article>
+      <span>2024–25</span>
+      <div>
+        <h3>Impact Evaluation Diploma · ProImpacto</h3>
+        <p>Randomized controlled trials, causal machine learning, impact evaluation, and causal mediation.</p>
+      </div>
+    </article>
+    <article>
+      <span>2024</span>
+      <div>
+        <h3>Data Science Diploma · Equilibrium Social Development Consulting</h3>
+        <p>Unsupervised machine learning, clustering, dimensionality reduction, and applied interpretation.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<aside class="teaching-note">
+  <p class="section-kicker">Teaching approach</p>
+  <blockquote>
+    “The strongest methods courses do more than teach estimators. They help students see where
+    evidence comes from, what it can carry, and where it can break.”
+  </blockquote>
+  <p>
+    My materials pair intuition with reproducible code and applied examples from development,
+    governance, and social policy. I teach with Stata, R, and Python.
+  </p>
+</aside>

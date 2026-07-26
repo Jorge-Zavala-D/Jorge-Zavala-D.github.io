@@ -1,9 +1,18 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"R&R":
+  color: "#9b4c38"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"WP":
+  color: "#526454"
 
-"Vision":
-  color: "#009f36"
+"WIP":
+  color: "#46616c"
+
+"RCT":
+  color: "#6d5848"
+
+"Chapter":
+  color: "#71546f"
+
+"IFAD":
+  url: https://www.ifad.org/
+  color: "#306c58"

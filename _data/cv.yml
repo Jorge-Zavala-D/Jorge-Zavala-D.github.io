@@ -1,189 +1,382 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Jorge E. Zavala
+  label: Political Economist and Doctoral Researcher
+  email: jorge.zavala@wzb.eu
+  location: Berlin, Germany
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: Political economist studying conflict legacies, transitional justice, development, migration, and digital inclusion through field experiments, quasi-experimental designs, and mixed methods.
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
     - network: GitHub
-      username: example
+      username: Jorge-Zavala-D
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: jorge-zavala-delgado
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
-        highlights:
-          - Description 1.
-          - Description 2.
-
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
-
-    Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
-        highlights:
-          - Relativity
-          - Description 2.
-
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
-        highlights:
-          - Description 1.
-          - Description 2.
-
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
+      - institution: Humboldt-Universität zu Berlin
         location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+        area: Political Science
+        studyType: PhD
+        start_date: 2025-09
+        end_date: present
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+          - "Dissertation: Breaking Cycles of Violence: Intergenerational Legacies of Conflict and Violence, and the Determinants of Effective Policy Pathways for Sustainable Peace and Development."
+          - "Supervisors: Macartan Humphreys, Anselm Hager, and Alexandra Scacco."
 
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+      - institution: University of Chicago
+        location: Chicago, United States
+        area: Public Policy
+        studyType: Master of Public Policy with Honors
+        start_date: 2022-08
+        end_date: 2024-06
+        score: "GPA: 3.8/4.0"
+        highlights:
+          - "Thesis: Profiling Extremism Hotspots: Unraveling the Impact of Economic and Historical Drivers on Religious and Ethnic Violence in Burkina Faso."
+          - "Supervisor: Benjamin Krause."
 
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+      - institution: Pontificia Universidad Católica de Chile
+        location: Santiago, Chile
+        area: Impact Evaluation of Public Policies
+        studyType: Graduate Diploma
+        start_date: 2021-08
+        end_date: 2021-12
+        score: "GPA: 3.6/4.0"
+        highlights:
+          - "Applied evaluation of UNDP's Impulso Local program."
 
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+      - institution: Universidad del Pacífico
+        location: Lima, Peru
+        area: Economics
+        studyType: Bachelor of Science
+        start_date: 2013
+        end_date: 2017
+        highlights:
+          - "Minor in Public Economics."
+          - "Thesis on commodity price shocks, mining activity, and social conflict in Peru."
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+    Academic and Research Appointments:
+      - company: WZB Berlin Social Science Center
+        position: Research Fellow / Doctoral Research Fellow
+        location: Berlin, Germany
+        start_date: 2025-07
+        end_date: present
+        highlights:
+          - Research on conflict, migration, political inequality, and post-conflict policy.
+          - Co-design and analysis of field experiments in Nigeria and Peru.
 
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
+      - company: World Bank, Development Impact Evaluation (DIME)
+        position: Research Consultant
+        location: Washington, DC / Tanzania
+        start_date: 2024-07
+        end_date: 2025-07
+        highlights:
+          - Quantitative research and reproducible systems for the Maji Endelevu water-maintenance program in Tanzania.
+
+      - company: University of Chicago, Center for the Economics of Human Development
+        position: Graduate Teaching Assistant
+        location: Chicago, United States
+        start_date: 2022-09
+        end_date: 2023-09
+
+      - company: International Initiative for Impact Evaluation (3ie)
+        position: Research Associate Consultant
+        location: Washington, DC / Remote
+        start_date: 2022-04
+        end_date: 2023-08
+        highlights:
+          - Impact evaluation and reproducibility work, including ADN Dignidad in Colombia.
+
+      - company: Universidad del Pacífico Research Center
+        position: Graduate Research Analyst
+        location: Lima, Peru
+        start_date: 2018-08
+        end_date: 2020-03
+        highlights:
+          - Research on education, philanthropy, financial inclusion, and social policy.
+
+    Applied Research and Professional Experience:
+      - company: Equilibrium Social Development Consulting
+        position: Senior Quantitative Research Consultant
+        location: Latin America / Remote
+        start_date: 2024-07
+        end_date: present
+        highlights:
+          - Lead quantitative research on migration, financial inclusion, public health, disability inclusion, and urban services.
+          - Design reproducible survey monitoring, data-quality, segmentation, and econometric workflows for international organizations and development-finance institutions.
+
+      - company: Fundación Capital
+        position: Head of Data & Research
+        location: Latin America / Remote
+        start_date: 2019-08
+        end_date: present
+        highlights:
+          - Lead research on digital financial inclusion, economic opportunity, migration, and AI-enabled services.
+          - Design field studies, impact evaluations, measurement systems, and evidence-to-policy products.
+
+      - company: Peruvian Society of Foreign Trade (COMEXPERU)
+        position: Economic Research Analyst
+        location: Lima, Peru
+        start_date: 2019-06
+        end_date: 2022-08
+        highlights:
+          - Wrote 71 weekly articles on trade, productivity, small firms, tourism, mining, and green growth.
+          - Developed and maintained economic indicators and policy-monitoring tools.
+
+      - company: Instiglio
+        position: Projects Analyst
+        location: Lima, Peru
+        start_date: 2018-01
+        end_date: 2018-08
+        highlights:
+          - Research and analysis for results-based financing and social-impact projects.
+
+    Current Research Projects:
+      - name: Breaking Cycles of Violence
+        summary: Cumulative dissertation on the intergenerational legacies of violence and the material and informational pathways through which transitional justice can generate recognition, legitimacy, and durable repair.
+        highlights:
+          - Historical conflict exposure and the intergenerational transmission of violence in Peru.
+          - Collective reparations, migration, and policy feedback in post-conflict Peru.
+          - A cluster-randomized saturation pilot on transitional-justice information in Ayacucho and San Martín.
+        start_date: 2025
+        end_date: present
+
+      - name: Evaluating CBT Group Interventions in Conflict-Affected Nigerian Communities
+        summary: Two-wave randomized evaluation across 24 communities in Kaduna, Plateau, and Taraba.
+        highlights:
+          - "Coauthors: Nora Chirikure, Macartan Humphreys, Madalena Kresimon, and Alexandra Scacco."
+          - "Outcomes: psychological recovery, functioning, agency, social connection, and verified community participation."
+        start_date: 2026
+        end_date: present
+
+      - name: Digital Bridges for Financial Inclusion
+        summary: Mixed-methods research on digital public infrastructure, remittances, fraud, financial autonomy, and Venezuelan migrant women in Colombia.
+        highlights:
+          - "Coauthor: Angélica Cardozo."
+          - Combines surveys, latent class analysis, interviews, focus groups, institutional interviews, and regional benchmarking.
+        start_date: 2025
+        end_date: present
+
+      - name: Coaching the Match
+        summary: Three-arm randomized evaluation of WhatsApp micro-learning and AI-enabled business tools for informal service providers using the Biscate platform in Mozambique.
+        highlights:
+          - "Coauthor: Carla Srebot."
+          - "Planned sample: 1,200 active workers."
+        start_date: 2025
+        end_date: present
+
+    Publications and Work in Progress:
+      - title: "The Myth of the Misinformed Migrant? Survey Insights from Nigeria's Irregular Migration Epicenter"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+          - Bernd Beber
+          - Alexandra Scacco
+          - Jorge E. Zavala
+        publisher: Revise and resubmit
+        releaseDate: 2026
+
+      - title: "Are Collective Reparations Transitional or Transformational? Migration and Policy Feedback in Post-Conflict Peru"
+        authors:
+          - Matthew Bird
+          - Ben Dumez
+          - Jorge E. Zavala
+        publisher: Forthcoming
+        releaseDate: 2026
+
+      - title: "Recognition-through-Information? Transitional Justice Knowledge, Legitimacy, and Rule-of-Law Orientations in Post-Conflict Peru"
+        authors:
+          - Jorge E. Zavala
+        publisher: Working paper
+        releaseDate: 2026
+
+      - title: "Digital Bridges for Financial Inclusion: The Role of Public Digital Infrastructure in Empowering Migrant Women and Facilitating Remittances in Colombia"
+        authors:
+          - Angélica Cardozo
+          - Jorge E. Zavala
+        publisher: Working paper
+        releaseDate: 2026
+
+      - title: "Coaching the Match: Experimental Evidence from Chatbot Assistance and AI Augmentation in Mozambique's Gig Economy"
+        authors:
+          - Jorge E. Zavala
+          - Carla Srebot
+        publisher: Pre-analysis plan and working paper in progress
+        releaseDate: 2026
+
+      - title: "Reallocation, Firm Dynamics, and the Advanced-Economy Trap: Evidence from German Establishment Data"
+        authors:
+          - Alejandro Arrieta
+          - Jorge E. Zavala
+        publisher: Work in progress
+        releaseDate: 2026
+
+      - title: "Trust in Ability or Ability to Trust: Experimental Evidence on Financial Education, Couple Communication, and Gender Norms"
+        authors:
+          - Matthew Bird
+          - Jorge E. Zavala
+        publisher: Forthcoming book chapter
+
+      - title: Agricultural Insurance in Latin America and the Caribbean
+        authors:
+          - Diana Gómez
+          - Rocío Montes
+          - Santiago Navarrete
+          - Andrea Ortiz
+          - Jorge E. Zavala
+        publisher: International Fund for Agricultural Development
+        releaseDate: 2020
+
+    Selected Applied Research:
+      - name: Economic Contributions of Migration in Latin America and the Caribbean
+        summary: Comparative macroeconomic and microeconomic analysis for the International Organization for Migration.
+        highlights:
+          - Quantitative consultant and contributing author.
+          - Household-survey harmonization, labor-market analysis, fiscal contribution, and reproducible delivery.
+        start_date: 2025
+        end_date: 2025
+
+      - name: Financial Inclusion of NARP and Indigenous Communities in Colombia
+        summary: Mixed-methods market research for IFC and IDB Invest with Fundación Capital and Equilibrium SDC.
+        highlights:
+          - 1,000 surveys across five municipalities, unsupervised segmentation, interviews, focus groups, and client personas.
+        start_date: 2024
+        end_date: 2025
+
+      - name: Migrant Access to Health and Social Protection in Peru
+        summary: Field-data quality, reproducible quantitative analysis, and segmentation for WHO/PAHO.
+        start_date: 2025
+        end_date: 2025
+
+      - name: Public Perceptions of Venezuelan Migration in Peru
+        summary: Baseline survey on intergroup contact, economic beliefs, social distance, insecurity, and media exposure for CEDRO.
+        start_date: 2024
+        end_date: 2024
+
+      - name: Urban Sanitation Access in Fernando de la Mora
+        summary: Longitudinal survey systems, geospatial sampling, field audits, and spillover measurement for an Inter-American Development Bank program in Paraguay.
+        start_date: 2023
+        end_date: 2025
+
+      - name: Healthcare Barriers for People with Intellectual Disabilities
+        summary: Multi-country survey harmonization, index construction, regression, and segmentation for Special Olympics.
+
+    Teaching:
+      - company: Hertie School
+        position: Teaching Assistant, Statistics II - Causal Inference
+        location: Berlin, Germany
+        start_date: 2026-01
+        end_date: present
+
+      - company: ProImpacto
+        position: Lecturer, Impact Evaluation Diploma
+        location: Remote
+        start_date: 2024-06
+        end_date: 2025-10
+        highlights:
+          - Randomized controlled trials, causal machine learning, impact evaluation, and causal mediation.
+
+      - company: Equilibrium Social Development Consulting
+        position: Lecturer, Data Science Diploma
+        location: Remote
+        start_date: 2024-08
+        end_date: 2024-08
+        highlights:
+          - Unsupervised machine learning, clustering, and dimensionality reduction.
+
+      - company: University of Chicago
+        position: Graduate Teaching Assistant
+        location: Chicago, United States
+        start_date: 2023-08
+        end_date: 2024-06
+        highlights:
+          - Math and Coding Camp
+          - Economics for Public Policy
+          - Advanced Microeconomics for Public Policy
+          - Advanced Statistics II
+          - Data Analytics II
+          - Program Evaluation
+          - Modern Survey Research
+
+      - company: Universidad del Pacífico
+        position: Teaching Assistant, Econometrics I
+        location: Lima, Peru
+        start_date: 2016-03
+        end_date: 2017-12
+
+    Grants and Funding:
+      - title: Digital Bridges for Financial Inclusion
+        authors:
+          - Center for Financial Inclusion
+        date: 2025
+        awarder: Center for Financial Inclusion
+        summary: USD 40,000 for research on digital public infrastructure and migrant women's financial inclusion in Colombia.
+
+      - title: Informing Transitional Justice
+        authors:
+          - WZB Berlin Social Science Center
+        date: 2025
+        awarder: WZB Berlin Social Science Center
+        summary: USD 10,000 for a cluster-randomized pilot in conflict-affected communities in Peru.
+
+    Selected Conferences and Presentations:
+      - name: UN Open Source Week
+        summary: "Panel: Building Inclusion: Identity, Payments, and the Real Cost of Digital Public Infrastructure."
+        highlights:
+          - United Nations Headquarters, New York, June 2026.
+
+      - name: UCL Conflict and Change PhD Workshop
+        summary: London, May 2026.
+
+      - name: Berlin Development Workshop
+        summary: Recognition-through-Information? Berlin, May 2026.
+
+      - name: Armenian Economic Association Annual Meeting
+        summary: Are Collective Reparations Transitional or Transformational? 2026.
+
+      - name: Empirical Studies in Conflict Research Annual Meeting
+        summary: Washington, DC, October 2025.
+
+      - name: WZB Institutions and Political Inequality Seminar
+        summary: Are Collective Reparations Transitional or Transformational? Berlin, September 2025.
+
+      - name: KDIS-World Bank DIME Development Impact Conference
+        summary: Seoul, November 2024.
+
+      - name: APEC Workshops
+        summary: Tourism competitiveness in Manila and MSME policy in Lima, 2019.
+
+      - name: LISTA Financial Education Panel
+        summary: Lima, February 2019.
+
+    Research Contributions:
+      - name: ADN Dignidad impact evaluation
+        summary: Research contribution to the 3ie evaluation led by Paulo Celhay and Claudia Martínez, 2023.
+
+      - name: "Early Childhood Development: Parental Beliefs Are Key for Investments in Children"
+        summary: Research contribution to the NBER working paper by Attanasio, Bird, and coauthors, 2019.
+
+      - name: Philanthropy and education in Peru and Latin America
+        summary: Research contributions to work by Matthew Bird, Vanessa León, and coauthors, 2018-2019.
+
+      - name: Financial education, couple communication, and gender norms
+        summary: Research contribution to an applied study for BBVA, 2020.
 
     Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: Quantitative Research
+        level: Advanced
+        icon: fa-solid fa-chart-line
+        keywords: "Randomized evaluations, regression discontinuity, causal inference, causal machine learning, survey research, mixed methods, geospatial analysis, reproducible research"
+
+      - name: Software
+        level: Advanced
+        icon: fa-solid fa-code
+        keywords: "Stata, R, Python, ArcGIS, LaTeX, Power BI, Tableau, EViews, Visual Basic, Microsoft Office"
 
     Languages:
-      - name: German
-        summary: "Native speaker"
-
+      - name: Spanish
+        summary: Native
       - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+        summary: Advanced
+      - name: Portuguese
+        summary: Intermediate
+      - name: French
+        summary: Intermediate
