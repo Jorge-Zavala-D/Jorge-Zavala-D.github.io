@@ -22,4 +22,5 @@
 @use "tabs";
 @use "teachings";
 @use "typograms";
+// Keep this entrypoint revision aligned with site-owned visual updates so cache-busted builds refresh.
 @use "jorge";
