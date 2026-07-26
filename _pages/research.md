@@ -71,7 +71,7 @@ nav_order: 1
       <div class="work-card__meta"><span>Reparations</span><span>Fuzzy RD</span></div>
       <h3>Are Collective Reparations Transitional or Transformational?</h3>
       <p class="work-card__subtitle">Migration and Policy Feedback in Post-Conflict Peru</p>
-      <p class="byline">With Matthew Bird and Ben Dumez</p>
+      <p class="byline">With Matthew Bird and Ana María Dumez</p>
       <p>
         Peru's Collective Reparations Program was designed to recognize collective harm and
         support local recovery. Because reparations often arrive as infrastructure or livelihood
