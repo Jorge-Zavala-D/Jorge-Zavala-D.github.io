@@ -22,5 +22,9 @@
 @use "tabs";
 @use "teachings";
 @use "typograms";
-// Keep this entrypoint revision aligned with site-owned visual updates so cache-busted builds refresh.
 @use "jorge";
+
+// Increment when site-owned partials change so cache-busted builds receive a new compiled asset.
+:root {
+  --jz-stylesheet-revision: 2;
+}
