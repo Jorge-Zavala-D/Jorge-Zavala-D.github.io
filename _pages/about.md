@@ -99,7 +99,7 @@ description: Political economist studying conflict, transitional justice, develo
         <h3>Are Collective Reparations Transitional or Transformational?</h3>
         <p class="work-card__subtitle">Migration and Policy Feedback in Post-Conflict Peru</p>
         <p>
-          With Matthew Bird and Ben Dumez. A fuzzy regression discontinuity design evaluates
+          With Matthew Bird and Ana María Dumez. A fuzzy regression discontinuity design evaluates
           whether collective reparations repair state–society relations while transforming
           community trajectories through migration and expanded state access.
         </p>
