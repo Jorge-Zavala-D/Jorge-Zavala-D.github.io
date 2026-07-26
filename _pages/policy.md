@@ -218,24 +218,50 @@ nav_order: 3
     <li>
       <time>2026</time>
       <div>
+        <h3>Peruvian Economic Association Annual Meeting</h3>
+        <p><em>Recognition-through-Information?</em> · Session 2A: State, Institutions, and Governance · Universidad del Pacífico, Lima · July 22</p>
+        <a href="{{ '/assets/pdf/presentations/2026-ape-recognition-through-information.pdf' | relative_url }}">Slides</a>
+        <a href="{{ '/assets/pdf/programs/2026-ape-annual-meeting-program.pdf' | relative_url }}">Program</a>
+      </div>
+    </li>
+    <li>
+      <time>2026</time>
+      <div>
+        <h3>2nd Junior Workshop on Economics of Latin America</h3>
+        <p><em>Are Collective Reparations Transitional or Transformational?</em> · Session 7: Migration · Freie Universität Berlin · July 10</p>
+        <p>Also served as discussant in Session 4: Trade, Environment, and Resources.</p>
+        <a href="{{ '/assets/pdf/programs/2026-economics-latin-america-workshop-program.pdf' | relative_url }}">Program</a>
+      </div>
+    </li>
+    <li>
+      <time>2026</time>
+      <div>
+        <h3>16th Armenian Economic Association Annual Meeting</h3>
+        <p><em>Are Collective Reparations Transitional or Transformational?</em> · Session 5A: Migration and Regional Development · American University of Armenia, Yerevan · June 30</p>
+        <a href="https://aea.am/wp-content/uploads/2026/06/AEA_Program_2026_28M6.pdf">Program</a>
+      </div>
+    </li>
+    <li>
+      <time>2026</time>
+      <div>
         <h3>UCL Conflict &amp; Change PhD Workshop</h3>
-      <p>London · May 18–19</p>
+        <p>Presenter · London · May 18–19</p>
+      </div>
+    </li>
+    <li>
+      <time>2026</time>
+      <div>
+        <h3>4th Milan PhD Economics Workshop</h3>
+        <p><em>Are Collective Reparations Transitional or Transformational?</em> · Session 7: Inequality, Social Mobility, and Household Decisions · Bocconi University, Milan · May 12</p>
+        <a href="{{ '/assets/pdf/programs/2026-milan-phd-economics-workshop-program.pdf' | relative_url }}">Program</a>
       </div>
     </li>
     <li>
       <time>2026</time>
       <div>
         <h3>Berlin Development Workshop</h3>
-        <p>Recognition-through-Information? · Berlin · May 11</p>
+        <p><em>Recognition-through-Information?</em> · Early-Stage Feedback Session · ESMT Berlin · May 11</p>
         <a href="https://www.rwi-essen.de/fileadmin/user_upload/RWI/RWI/Buero_Berlin/Berlin_Development_Workshop_2026_Agenda.pdf">Program</a>
-      </div>
-    </li>
-    <li>
-      <time>2026</time>
-      <div>
-        <h3>Armenian Economic Association Annual Meeting</h3>
-        <p>Are Collective Reparations Transitional or Transformational?</p>
-        <a href="https://aea.am/wp-content/uploads/2026/06/AEA_Program_2026_28M6.pdf">Program</a>
       </div>
     </li>
     <li>

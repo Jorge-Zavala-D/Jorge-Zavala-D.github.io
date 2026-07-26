@@ -54,6 +54,7 @@ cv:
         highlights:
           - "Minor in Public Economics."
           - "Thesis on commodity price shocks, mining activity, and social conflict in Peru."
+          - "Thesis supervisor: Matthew Bird."
 
     Academic and Research Appointments:
       - company: WZB Berlin Social Science Center
@@ -332,20 +333,51 @@ cv:
         awarder: WZB Berlin Social Science Center
         summary: USD 10,000 for a cluster-randomized pilot in conflict-affected communities in Peru.
 
+      - title: 16th Annual Meeting Conference Travel Grant
+        authors:
+          - Armenian Economic Association
+        date: 2026
+        awarder: Armenian Economic Association
+        summary: EUR 100 travel award for presentation at the 2026 Annual Meeting in Yerevan.
+
     Selected Conferences and Presentations:
+      - name: 2026 Annual Meeting of the Peruvian Economic Association
+        summary: "Recognition-through-Information? Transitional Justice Knowledge, Legitimacy, and Rule-of-Law Orientations in Post-Conflict Peru: Evidence from a Randomized Saturation Pilot."
+        highlights:
+          - "Presenter, Session 2A: State, Institutions, and Governance."
+          - "Universidad del Pacífico, Lima, July 22–23, 2026."
+
+      - name: 2nd Junior Workshop on Economics of Latin America
+        summary: "Are Collective Reparations Transitional or Transformational? Migration and Policy Feedback in Peru."
+        highlights:
+          - "Presenter, Session 7: Migration; discussant, Session 4: Trade, Environment, and Resources."
+          - "Freie Universität Berlin, July 9–10, 2026."
+
+      - name: 16th Armenian Economic Association Annual Meeting
+        summary: "Are Collective Reparations Transitional or Transformational? Migration and Policy Feedback in Peru."
+        highlights:
+          - "Presenter, Session 5A: Migration and Regional Development."
+          - "American University of Armenia, Yerevan, June 29–July 1, 2026."
+
       - name: UN Open Source Week
         summary: "Panel: Building Inclusion: Identity, Payments, and the Real Cost of Digital Public Infrastructure."
         highlights:
-          - United Nations Headquarters, New York, June 2026.
+          - "Panelist, United Nations Headquarters, New York, June 24, 2026."
 
       - name: UCL Conflict and Change PhD Workshop
-        summary: London, May 2026.
+        summary: "Presenter, London, May 18–19, 2026."
+
+      - name: 4th Milan PhD Economics Workshop
+        summary: "Are Collective Reparations Transitional or Transformational? Migration and Policy Feedback in Peru."
+        highlights:
+          - "Presenter, Session 7: Inequality, Social Mobility, and Household Decisions."
+          - "Bocconi University, Milan, May 12–13, 2026."
 
       - name: Berlin Development Workshop
-        summary: Recognition-through-Information? Berlin, May 2026.
-
-      - name: Armenian Economic Association Annual Meeting
-        summary: Are Collective Reparations Transitional or Transformational? 2026.
+        summary: "Recognition-through-Information? Transitional Justice Knowledge, Legitimacy, and Rule-of-Law Orientations in Post-Conflict Peru: Evidence from a Randomized Saturation Pilot."
+        highlights:
+          - "Presenter, Early-Stage Feedback Session."
+          - "ESMT Berlin, May 11, 2026."
 
       - name: Empirical Studies in Conflict Research Annual Meeting
         summary: Washington, DC, October 2025.
