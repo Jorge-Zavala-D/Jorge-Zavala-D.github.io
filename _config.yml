@@ -207,6 +207,7 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
+  - .openai/
   - al-folio-upgrade-report.md
   - bin/
   - CONTRIBUTING.md
@@ -227,6 +228,7 @@ exclude:
   - purgecss.config.js
   - README.md
   - readme_preview/
+  - sites-runtime/
   - gems/
   - migrations/
   - vendor
