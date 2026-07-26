@@ -1,13 +1,8 @@
 const canonicalOrigin = "https://jorge-zavala-d.github.io";
-const canonicalBasePath = "/Jorge-Zavala-Academic-Site";
 
 function upstreamUrl(requestUrl) {
   const incoming = new URL(requestUrl);
-  const pathname = incoming.pathname.startsWith(canonicalBasePath)
-    ? incoming.pathname
-    : `${canonicalBasePath}${incoming.pathname === "/" ? "/" : incoming.pathname}`;
-
-  return new URL(`${pathname}${incoming.search}`, canonicalOrigin);
+  return new URL(`${incoming.pathname}${incoming.search}`, canonicalOrigin);
 }
 
 export default {

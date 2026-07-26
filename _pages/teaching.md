@@ -18,13 +18,14 @@ nav_order: 4
 <section class="teaching-feature">
   <div>
     <p class="section-kicker">Current</p>
-    <h2>Statistics II: Causal Inference</h2>
+    <h2>Statistics I &amp; II</h2>
     <p class="teaching-feature__place">Hertie School · Teaching Assistant · 2026–present</p>
   </div>
   <p>
-    Graduate instruction on potential outcomes, experiments, regression, matching,
-    difference-in-differences, instrumental variables, and regression discontinuity—with an
-    emphasis on translating identification arguments into transparent empirical work.
+    <strong>GRAD-C6-2001: Statistics II: Statistical Modeling and Causal Inference</strong> and
+    <strong>GRAD-C5: Statistics I: Inference and Regression</strong>. Graduate instruction spanning
+    statistical inference, regression, potential outcomes, experiments, matching,
+    difference-in-differences, instrumental variables, and regression discontinuity.
   </p>
 </section>
 

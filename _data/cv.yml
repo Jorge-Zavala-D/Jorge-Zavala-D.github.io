@@ -57,7 +57,7 @@ cv:
 
     Academic and Research Appointments:
       - company: WZB Berlin Social Science Center
-        position: Research Fellow / Doctoral Research Fellow
+        position: Doctoral Research Fellow
         location: Berlin, Germany
         start_date: 2025-07
         end_date: present
@@ -66,21 +66,22 @@ cv:
           - Co-design and analysis of field experiments in Nigeria and Peru.
 
       - company: World Bank, Development Impact Evaluation (DIME)
-        position: Research Consultant
+        position: Research Analyst / Short-Term Consultant
         location: Washington, DC / Tanzania
-        start_date: 2024-07
+        start_date: 2023-06
         end_date: 2025-07
         highlights:
           - Quantitative research and reproducible systems for the Maji Endelevu water-maintenance program in Tanzania.
+          - Two appointments, from June to August 2023 and from July 2024 to July 2025.
 
       - company: University of Chicago, Center for the Economics of Human Development
-        position: Graduate Teaching Assistant
+        position: Graduate Research Assistant
         location: Chicago, United States
-        start_date: 2022-09
+        start_date: 2022-08
         end_date: 2023-09
 
       - company: International Initiative for Impact Evaluation (3ie)
-        position: Research Associate Consultant
+        position: Research Consultant
         location: Washington, DC / Remote
         start_date: 2022-04
         end_date: 2023-08
@@ -97,22 +98,23 @@ cv:
 
     Applied Research and Professional Experience:
       - company: Equilibrium Social Development Consulting
-        position: Senior Quantitative Research Consultant
+        position: Quantitative Research Consultant
         location: Latin America / Remote
-        start_date: 2024-07
-        end_date: present
+        start_date: 2024-06
+        end_date: 2025-09
         highlights:
-          - Lead quantitative research on migration, financial inclusion, public health, disability inclusion, and urban services.
-          - Design reproducible survey monitoring, data-quality, segmentation, and econometric workflows for international organizations and development-finance institutions.
+          - Led quantitative research on migration, financial inclusion, public health, disability inclusion, and urban services.
+          - Designed reproducible survey monitoring, data-quality, segmentation, and econometric workflows for international organizations and development-finance institutions.
 
       - company: Fundación Capital
-        position: Head of Data & Research
+        position: Head of Data & Research (previously M&E Coordinator and Quantitative Research Specialist)
         location: Latin America / Remote
         start_date: 2019-08
-        end_date: present
+        end_date: 2026-07
         highlights:
-          - Lead research on digital financial inclusion, economic opportunity, migration, and AI-enabled services.
-          - Design field studies, impact evaluations, measurement systems, and evidence-to-policy products.
+          - "Head of Data & Research: April 2025-July 2026; Monitoring & Evaluation Coordinator: July 2024-April 2025; Quantitative Research Specialist: August 2019-June 2024."
+          - Led research on digital financial inclusion, economic opportunity, migration, and AI-enabled services.
+          - Designed field studies, impact evaluations, measurement systems, and evidence-to-policy products.
 
       - company: Peruvian Society of Foreign Trade (COMEXPERU)
         position: Economic Research Analyst
@@ -166,6 +168,16 @@ cv:
         end_date: present
 
     Publications and Work in Progress:
+      - title: "Evaluating CBT Group Interventions in Conflict-Affected Nigerian Communities"
+        authors:
+          - Nora Chirikure
+          - Macartan Humphreys
+          - Madalena Kresimon
+          - Alexandra Scacco
+          - Jorge E. Zavala
+        publisher: Work in progress
+        releaseDate: 2026
+
       - title: "The Myth of the Misinformed Migrant? Survey Insights from Nigeria's Irregular Migration Epicenter"
         authors:
           - Bernd Beber
@@ -261,10 +273,13 @@ cv:
 
     Teaching:
       - company: Hertie School
-        position: Teaching Assistant, Statistics II - Causal Inference
+        position: Graduate Teaching Assistant
         location: Berlin, Germany
         start_date: 2026-01
         end_date: present
+        highlights:
+          - "GRAD-C6-2001: Statistics II: Statistical Modeling and Causal Inference."
+          - "GRAD-C5: Statistics I: Inference and Regression."
 
       - company: ProImpacto
         position: Lecturer, Impact Evaluation Diploma

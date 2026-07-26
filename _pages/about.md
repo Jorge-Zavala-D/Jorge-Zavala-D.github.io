@@ -141,8 +141,6 @@ description: Political economist studying conflict, transitional justice, develo
       <ul class="clean-list appointments">
         <li><strong>Doctoral Researcher</strong><span>Humboldt-Universität zu Berlin</span></li>
         <li><strong>Research Fellow</strong><span>WZB Berlin Social Science Center</span></li>
-        <li><strong>Head of Data &amp; Research</strong><span>Fundación Capital</span></li>
-        <li><strong>Senior Quantitative Research Consultant</strong><span>Equilibrium SDC</span></li>
       </ul>
     </div>
     <aside class="field-note">
