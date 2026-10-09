@@ -63,6 +63,9 @@ executing its cells and retains its source content.
    It also verifies that `bundle exec` activates patched DNS and IMAP libraries.
 3. Runs pinned `pip-audit` 2.10.1 from a separate auditor environment against
    the actual website Python package directory, including installation tools.
+   Strict collection rejects unknown/unauditable packages instead of silently
+   reporting success after a skip; a real nonexistent-package metadata fixture
+   demonstrated exit 0 without strict collection versus nonzero with it.
    The auditor's dependencies cannot upgrade or mask the website's dependencies.
 4. Converts the existing notebook to HTML and checks that its source survives.
 
