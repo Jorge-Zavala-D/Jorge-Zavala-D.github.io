@@ -1,0 +1,40 @@
+name: Live website verification
+on:
+  workflow_run:
+    workflows: [Deploy site]
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  live:
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event != 'pull_request' && github.event.workflow_run.head_branch == 'main')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SITE_URL: https://jorge-zavala-d.github.io
+      CHECK_EXTERNAL_LINKS: "1"
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci && npx playwright install --with-deps chromium webkit
+      - name: Wait for this version of the CV to reach Pages
+        run: node test/wait-for-live-cv.js
+      - run: npm run test:visual
+      - name: Measure the actual homepage and CV
+        run: |
+          mkdir -p output/lighthouse
+          npx lighthouse "$SITE_URL/" --chrome-flags="--headless --no-sandbox" --output=json --output-path=output/lighthouse/home.json
+          npx lighthouse "$SITE_URL/cv/" --chrome-flags="--headless --no-sandbox" --output=json --output-path=output/lighthouse/cv.json
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        if: always()
+        with:
+          name: live-website-checks
+          path: |
+            output/playwright/
+            output/lighthouse/

@@ -57,11 +57,11 @@ bundle exec al-folio upgrade apply --safe     # deterministic codemods (font-wei
 bundle exec al-folio upgrade overrides diff <path>    # then `overrides accept <path>` to acknowledge an override
 ```
 
-`bin/setup-python-deps` installs the optional Python toolchain in `requirements.txt` (`nbconvert` for `jekyll-jupyter-notebook`, `rendercv[full]` for CV rendering, `scholarly` for `bin/update_scholar_citations.py`). Responsive-image generation (`imagemagick.enabled: true`) needs ImageMagick `convert` on PATH. `bin/deploy` is the manual `gh-pages` build+purgecss+force-push path (CI normally deploys).
+`bin/setup-python-deps` installs pinned `nbconvert` from `requirements.txt`. The CV PDF is compiled only from the Overleaf master using `scripts/sync-cv.ps1`; RenderCV and automatic citation writers are retired. ImageMagick `convert` is required for responsive images. Publishing goes through the checked GitHub Actions pipeline; `bin/deploy` no longer force-pushes a bypass deployment.
 
 ## Docker serving model (v1-specific)
 
-`docker compose up -d` bind-mounts the repo to `/srv/jekyll` and runs `bin/entry_point.sh`, which serves with `--force_polling --destination /tmp/_site`. The build output deliberately goes to **container-local `/tmp/_site`, not the bind-mounted `_site`** — writing `_site` back across the host bind mount caused write deadlocks. The container also `inotifywait`s `_config.yml` and restarts Jekyll on change (config edits aren't hot-reloaded by `--watch`). Verify with the `/al-folio` baseurl: `curl -fsS http://127.0.0.1:8080/al-folio/`. `docker-compose-slim.yml` pulls a prebuilt `:slim` image instead of building locally.
+`docker compose up --build` builds this repository's dependencies, bind-mounts it at `/srv/jekyll`, and serves with `--force_polling --destination /tmp/_site`. Output stays container-local to avoid Windows bind-mount write deadlocks. Restart after `_config.yml` changes. Verify the personal site's root at `http://127.0.0.1:8080/`; there is no `/al-folio` baseurl and no prebuilt slim-image path.
 
 ## CI gates and the style contract
 

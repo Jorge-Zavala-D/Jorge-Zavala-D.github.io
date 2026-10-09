@@ -6,10 +6,14 @@
     "test:visual:update": "playwright test --config test/visual/playwright.config.js --update-snapshots"
   },
   "devDependencies": {
-    "@playwright/test": "^1.56.1",
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.64.0",
     "@shopify/prettier-plugin-liquid": "^1.10.0",
+    "http-server": "14.1.1",
+    "lighthouse": "13.5.0",
     "pixelmatch": "^7.1.0",
     "pngjs": "^7.0.0",
-    "prettier": "^3.8.0"
+    "prettier": "^3.8.0",
+    "purgecss": "7.0.2"
   }
 }

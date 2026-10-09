@@ -32,7 +32,7 @@ cv:
         end_date: 2024-06
         score: "GPA: 3.8/4.0"
         highlights:
-          - "Thesis: Profiling Extremism Hotspots: Unraveling the Impact of Economic and Historical Drivers on Religious and Ethnic Violence in Burkina Faso."
+          - "Thesis: Profiling Extremism Hotspots: Identifying High-Risk Provinces for Violent Extremism in Burkina Faso Using Machine Learning."
           - "Supervisor: Benjamin Krause."
 
       - institution: Pontificia Universidad Católica de Chile

@@ -1,59 +1,28 @@
 name: Upgrade contract checks
-
 on:
   push:
-    branches:
-      - master
-      - main
-      - v1.0-dev
-    paths:
-      - "_config.yml"
-      - "_data/**"
-      - "_pages/**"
-      - "_posts/**"
-      - "_projects/**"
-      - "assets/**"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "test/integration_upgrade_cli.sh"
-      - ".github/workflows/upgrade-check.yml"
+    branches: [main]
   pull_request:
-    branches:
-      - master
-      - main
-      - v1.0-dev
-    paths:
-      - "_config.yml"
-      - "_data/**"
-      - "_pages/**"
-      - "_posts/**"
-      - "_projects/**"
-      - "assets/**"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "test/integration_upgrade_cli.sh"
-      - ".github/workflows/upgrade-check.yml"
-
+    branches: [main]
+permissions:
+  contents: read
 jobs:
   upgrade-check:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
-
-      - name: Setup Ruby 💎
-        uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: ruby/setup-ruby@e81a8fa391b11a595c1b7ed84177cc0fe02faf83 # v1, 2026-10-10
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
-
-      - name: Run upgrade audit 🧪
-        run: bundle exec al-folio upgrade audit
-
-      - name: Upload upgrade report 📄
+      - run: bundle exec al-folio upgrade audit
+      - run: bundle exec al-folio upgrade overrides audit
+      - run: bundle exec al-folio upgrade report
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         if: always()
-        uses: actions/upload-artifact@v4
         with:
           name: al-folio-upgrade-report
-          path: al-folio-upgrade-report.md
-          if-no-files-found: ignore
+          path: |
+            al-folio-upgrade-report.md
+            .al-folio-overrides.yml
+          include-hidden-files: true

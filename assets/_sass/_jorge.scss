@@ -44,7 +44,7 @@ body {
 
 a {
   color: var(--jz-rust);
-  text-decoration-color: rgba(155, 76, 56, 0.35);
+  text-decoration-color: currentColor;
   text-underline-offset: 0.18em;
 }
 
@@ -56,7 +56,7 @@ a:hover {
 a:focus-visible,
 button:focus-visible,
 input:focus-visible {
-  outline: 3px solid rgba(70, 97, 108, 0.5);
+  outline: 3px solid var(--jz-rust);
   outline-offset: 3px;
 }
 
@@ -437,7 +437,7 @@ nav.navbar {
 }
 
 .pillar__number {
-  color: rgba(255, 253, 248, 0.6);
+  color: var(--jz-white);
   font-family: var(--jz-serif);
   font-size: 1.1rem;
 }
@@ -664,12 +664,13 @@ nav.navbar {
 
 .public-feature h2,
 .public-feature p,
+.public-feature em,
 .public-feature a {
   color: var(--jz-white);
 }
 
 .public-feature__date {
-  color: rgba(255, 253, 248, 0.7);
+  color: var(--jz-white);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -783,6 +784,7 @@ nav.navbar {
 }
 
 .teaching-feature h2,
+.teaching-feature strong,
 .teaching-feature p {
   color: var(--jz-white);
 }
@@ -1225,6 +1227,32 @@ footer {
 footer .container {
   color: #eee7dc;
   font-size: 0.8rem;
+}
+
+footer a,
+footer a:hover,
+footer a:visited {
+  color: var(--jz-white);
+  text-decoration: underline;
+}
+
+.publications h2.year {
+  color: var(--jz-ink-soft);
+}
+
+.page-intro p a,
+.appearance-list a,
+.public-feature a,
+.teaching-feature a,
+.cv-section a,
+.contact-list a {
+  text-decoration: underline;
+}
+
+.public-feature a:focus-visible,
+.teaching-feature a:focus-visible,
+footer a:focus-visible {
+  outline-color: var(--jz-white);
 }
 
 /* Responsive */

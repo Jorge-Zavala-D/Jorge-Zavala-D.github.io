@@ -18,9 +18,13 @@ giscus:
   category_id: DIC_kwDOExample
 YAML
 
-bundle exec jekyll build --config "_config.yml,${tmp_override}" -d "${tmp_site}" >/dev/null
+tmp_source="${tmp_dir}/source"
+mkdir -p "${tmp_source}"
+cp -R _pages _data _bibliography assets "${tmp_source}/"
+cp test/fixtures/distill.md "${tmp_source}/_pages/"
+bundle exec jekyll build --source "${tmp_source}" --config "_config.yml,${tmp_override}" -d "${tmp_site}" >/dev/null
 
-distill_page="${tmp_site}/blog/2021/distill/index.html"
+distill_page="${tmp_site}/test-distill/index.html"
 
 if [ ! -f "${distill_page}" ]; then
   echo "distill page was not generated at ${distill_page}" >&2

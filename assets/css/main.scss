@@ -22,9 +22,9 @@
 @use "tabs";
 @use "teachings";
 @use "typograms";
-@use "jorge";
+@use "../_sass/jorge";
 
-// Increment when site-owned partials change so cache-busted builds receive a new compiled asset.
+// Site-specific styles live in assets/_sass so the existing cache-bust filter fingerprints them.
 :root {
-  --jz-stylesheet-revision: 3;
+  --jz-stylesheet-revision: 4;
 }

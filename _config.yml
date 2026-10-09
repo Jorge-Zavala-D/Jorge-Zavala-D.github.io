@@ -207,6 +207,20 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
+  - AGENTS.md
+  - CLAUDE.md
+  - scripts/
+  - test/
+  - output/
+  - node_modules/
+  - requirements.txt
+  - assets/rendercv/
+  - .agents/
+  - .codex/
+  - .claude/
+  - .al-folio-overrides.yml
+  - .gitattributes
+  - .cv-build/
   - .openai/
   - al-folio-upgrade-report.md
   - bin/

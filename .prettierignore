@@ -1,4 +1,6 @@
 **/*.map
+output/
+test/visual/output/
 **/*.min.css
 **/*.min.js
 assets/css/main.scss

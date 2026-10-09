@@ -18,10 +18,14 @@ giscus:
   category_id: DIC_kwDOExample
 YAML
 
-bundle exec jekyll build --config "_config.yml,${tmp_override}" -d "${tmp_site}" >/dev/null
+tmp_source="${tmp_dir}/source"
+mkdir -p "${tmp_source}"
+cp -R _pages _data _bibliography assets "${tmp_source}/"
+cp test/fixtures/giscus.md test/fixtures/disqus.md "${tmp_source}/_pages/"
+bundle exec jekyll build --source "${tmp_source}" --config "_config.yml,${tmp_override}" -d "${tmp_site}" >/dev/null
 
-giscus_page="${tmp_site}/blog/2022/giscus-comments/index.html"
-disqus_page="${tmp_site}/blog/2015/disqus-comments/index.html"
+giscus_page="${tmp_site}/test-giscus/index.html"
+disqus_page="${tmp_site}/test-disqus/index.html"
 
 grep -q 'https://giscus.app/client.js' "${giscus_page}"
 if grep -q 'giscus comments misconfigured' "${giscus_page}"; then
