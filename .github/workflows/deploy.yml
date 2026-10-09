@@ -23,6 +23,7 @@ jobs:
       - run: npm run lint:prettier && npm run lint:style-contract
       - run: node --test test/wait-for-live-cv.test.js
       - name: Build production site
+        id: production
         env:
           JEKYLL_ENV: production
         run: bundle exec jekyll build && npx purgecss -c purgecss.config.js
@@ -34,6 +35,7 @@ jobs:
           CHECK_SCREENSHOTS: ${{ hashFiles('test/visual/site.spec.js-snapshots/*.png') != '' && '1' || '' }}
         run: npm run test:visual
       - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        if: always() && steps.production.outcome == 'success'
         with:
           name: website
           path: _site/

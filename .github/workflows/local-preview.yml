@@ -18,7 +18,7 @@ jobs:
       - run: docker compose up -d --build
       - name: Verify root, CV and unchanged lockfile
         run: |
-          curl --retry 40 --retry-delay 5 --retry-connrefused -fsS http://127.0.0.1:8080/ > /dev/null
+          curl --retry 40 --retry-delay 5 --retry-all-errors -fsS http://127.0.0.1:8080/ > /dev/null
           curl -fsS http://127.0.0.1:8080/cv/ > /dev/null
           curl -fsS http://127.0.0.1:8080/assets/pdf/Jorge_Zavala_CV.pdf > /dev/null
           git diff --exit-code -- Gemfile.lock

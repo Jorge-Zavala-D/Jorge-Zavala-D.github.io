@@ -1,7 +1,7 @@
 const { test, expect } = require("@playwright/test");
 const AxeBuilder = require("@axe-core/playwright").default;
 
-const routes = ["/", "/research/", "/public-work/", "/teaching/", "/cv/", "/contact/"];
+const routes = ["/", "/research/", "/publications/", "/policy/", "/teaching/", "/cv/"];
 for (const route of routes) {
   test(`${route} is accessible and responsive`, async ({ page }, testInfo) => {
     const errors = [];
@@ -17,9 +17,13 @@ for (const route of routes) {
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
     await page.keyboard.press("Tab");
     expect(await page.evaluate(() => getComputedStyle(document.activeElement).outlineStyle)).not.toBe("none");
-    await page.screenshot({ path: `output/playwright/${testInfo.project.name}-${route.replaceAll("/", "") || "home"}.png`, fullPage: true });
+    await page.screenshot({
+      path: `output/playwright/${testInfo.project.name}-${route.replaceAll("/", "") || "home"}.png`,
+      fullPage: true,
+      scale: "css",
+    });
     if (process.env.CHECK_SCREENSHOTS)
-      await expect(page).toHaveScreenshot(`${route.replaceAll("/", "") || "home"}.png`, { fullPage: true, maxDiffPixelRatio: 0.01 });
+      await expect(page).toHaveScreenshot(`${route.replaceAll("/", "") || "home"}.png`, { fullPage: true, scale: "css", maxDiffPixelRatio: 0.01 });
   });
 }
 
