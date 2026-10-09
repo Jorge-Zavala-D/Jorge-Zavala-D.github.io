@@ -67,4 +67,16 @@ if [ "${main_bytes}" -lt 1000 ]; then
   exit 1
 fi
 
-echo "css minify integration checks passed"
+# A partial-only change must refresh the theme's cache query without a main.scss edit.
+cache_fixture="${tmp_dir}/cache-fixture"
+mkdir -p "${cache_fixture}/assets/_sass"
+cp assets/_sass/_jorge.scss "${cache_fixture}/assets/_sass/"
+cache_query() {
+  bundle exec ruby -rjekyll -rjekyll-cache-bust -e 'Dir.chdir(ARGV[0]) { puts Object.new.extend(Jekyll::CacheBust).bust_css_cache("/assets/css/main.css") }' "${cache_fixture}"
+}
+before_query="$(cache_query)"
+printf '\n/* integration cache change */\n' >> "${cache_fixture}/assets/_sass/_jorge.scss"
+after_query="$(cache_query)"
+[ "${before_query}" != "${after_query}" ] || { echo "custom Sass changes do not refresh the cache query" >&2; exit 1; }
+
+echo "css minify and partial cache fingerprint integration checks passed"

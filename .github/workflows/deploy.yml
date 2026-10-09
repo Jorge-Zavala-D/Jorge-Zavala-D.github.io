@@ -26,6 +26,8 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: bundle exec jekyll build && npx purgecss -c purgecss.config.js
+      - name: Identify this exact generated release
+        run: node -e "require('node:fs').writeFileSync('_site/site-version.json', JSON.stringify({commit:process.env.GITHUB_SHA}))"
       - run: npx playwright install --with-deps chromium webkit
       - name: Accessibility, responsive layout, links and CV checks
         env:
@@ -43,7 +45,7 @@ jobs:
           path: output/playwright/
   publish:
     needs: build
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: write

@@ -23,7 +23,7 @@ description: Political economist studying conflict, transitional justice, develo
       </p>
       <div class="button-row">
         <a class="button button--primary" href="{{ '/research/' | relative_url }}">Explore my research</a>
-        <a class="button button--ghost" href="{{ '/assets/pdf/Jorge_Zavala_CV.pdf' | relative_url }}">Download CV</a>
+        <a class="button button--ghost" href="{{ '/assets/pdf/Jorge_Zavala_CV.pdf' | relative_url | bust_file_cache }}">Download CV</a>
       </div>
       <div class="hero__links" aria-label="Professional links">
         <a href="mailto:jorge.zavala@wzb.eu">Email</a>

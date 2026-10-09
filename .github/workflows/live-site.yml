@@ -14,6 +14,7 @@ jobs:
     env:
       SITE_URL: https://jorge-zavala-d.github.io
       CHECK_EXTERNAL_LINKS: "1"
+      EXPECTED_SITE_COMMIT: ${{ github.event.workflow_run.head_sha || github.sha }}
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
@@ -23,7 +24,7 @@ jobs:
           node-version: "24"
           cache: npm
       - run: npm ci && npx playwright install --with-deps chromium webkit
-      - name: Wait for this version of the CV to reach Pages
+      - name: Wait for this exact release and reviewed CV to reach Pages
         run: node test/wait-for-live-cv.js
       - run: npm run test:visual
       - name: Measure the actual homepage and CV

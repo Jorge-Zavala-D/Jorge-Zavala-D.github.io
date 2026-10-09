@@ -47,8 +47,8 @@ try {
   $bytes = [IO.File]::ReadAllBytes($compiledPdf)
   if ($bytes.Length -lt 1000 -or [Text.Encoding]::ASCII.GetString($bytes, 0, 5) -ne '%PDF-') { throw 'Compiler output is not a valid PDF.' }
   # Only replace the reviewed PDF after successful compilation and validation.
-  $replacement = "$sitePdf.new"
-  [IO.File]::Copy($compiledPdf, $replacement, $true)
+  $replacement = "$sitePdf.$([IO.Path]::GetFileName($buildDir)).new"
+  [IO.File]::Copy($compiledPdf, $replacement, $false)
   if (Test-Path -LiteralPath $sitePdf) { [IO.File]::Replace($replacement, $sitePdf, (Join-Path $buildDir 'previous-public-cv.pdf')) }
   else { [IO.File]::Move($replacement, $sitePdf) }
   Write-Output "Updated CV: $sitePdf"

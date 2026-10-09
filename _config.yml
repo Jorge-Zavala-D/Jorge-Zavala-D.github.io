@@ -215,6 +215,7 @@ exclude:
   - node_modules/
   - requirements.txt
   - assets/rendercv/
+  - assets/pdf/*.new
   - .agents/
   - .codex/
   - .claude/

@@ -16,6 +16,8 @@ output/playwright/
 test/visual/output/
 output/cv-build/
 output/lighthouse/
+output/ci/
+assets/pdf/*.new
 test-results/
 vendor
 sites-runtime/dist/

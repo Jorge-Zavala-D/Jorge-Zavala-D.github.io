@@ -31,13 +31,13 @@ description: A concise academic record of education, appointments, research, tea
       <div class="cv-actions">
         <a
           class="button button--primary"
-          href="{{ '/assets/pdf/Jorge_Zavala_CV.pdf' | relative_url }}"
+          href="{{ '/assets/pdf/Jorge_Zavala_CV.pdf' | relative_url | bust_file_cache }}"
           target="_blank"
           rel="noopener noreferrer"
         >
           View full CV (PDF)
         </a>
-        <a class="cv-actions__text" href="{{ '/assets/pdf/Jorge_Zavala_CV.pdf' | relative_url }}" download>
+        <a class="cv-actions__text" href="{{ '/assets/pdf/Jorge_Zavala_CV.pdf' | relative_url | bust_file_cache }}" download>
           Download PDF
         </a>
       </div>
@@ -162,7 +162,7 @@ description: A concise academic record of education, appointments, research, tea
     </div>
     <a
       class="button button--ghost"
-      href="{{ '/assets/pdf/Jorge_Zavala_CV.pdf' | relative_url }}"
+      href="{{ '/assets/pdf/Jorge_Zavala_CV.pdf' | relative_url | bust_file_cache }}"
       target="_blank"
       rel="noopener noreferrer"
     >
