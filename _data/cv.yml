@@ -341,6 +341,11 @@ cv:
         summary: EUR 100 travel award for presentation at the 2026 Annual Meeting in Yerevan.
 
     Selected Conferences and Presentations:
+      - name: Financial Inclusion Week 2026
+        summary: "Building Inclusion in Digital Public Infrastructure: Research from Global DPI Insights Community."
+        highlights:
+          - "Panelist, presenting research on digital public infrastructure and migrant women's financial inclusion in Colombia."
+          - "Center for Financial Inclusion (CFI), virtual, October 6, 2026."
       - name: 2026 Annual Meeting of the Peruvian Economic Association
         summary: "Recognition-through-Information? Transitional Justice Knowledge, Legitimacy, and Rule-of-Law Orientations in Post-Conflict Peru: Evidence from a Randomized Saturation Pilot."
         highlights:

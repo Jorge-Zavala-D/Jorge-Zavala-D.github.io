@@ -17,9 +17,26 @@ nav_order: 3
 </div>
 
 <section class="public-feature">
+  <div class="public-feature__date">October 6, 2026 · Virtual</div>
+  <div>
+    <p class="section-kicker">Latest appearance</p>
+    <h2>Building Inclusion in Digital Public Infrastructure: Research from Global DPI Insights Community</h2>
+    <p>
+      At Financial Inclusion Week 2026, convened by the Center for Financial Inclusion (CFI), I joined a research panel on inclusive digital
+      public infrastructure. Drawing on <em>Digital Bridges to Financial Inclusion</em>, joint work with Angélica Cardozo Cadavid, I discussed
+      migrant women's financial inclusion in Colombia, cross-border remittances, trust, and consumer protection.
+    </p>
+    <a class="text-link" href="https://www.centerforfinancialinclusion.org/convenings/financial-inclusion-week/"
+      >Financial Inclusion Week <span aria-hidden="true">→</span></a
+    >
+    <a class="text-link" href="{{ '/research/' | relative_url }}">Related research <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<section class="public-feature">
   <div class="public-feature__date">June 2026 · New York</div>
   <div>
-    <p class="section-kicker">Featured appearance</p>
+    <p class="section-kicker">Previous appearance</p>
     <h2>Building Inclusion: Identity, Payments, and the Real Cost of Digital Public Infrastructure</h2>
     <p>
       At UN Open Source Week, I joined a panel on the infrastructure and institutional choices
@@ -215,6 +232,17 @@ nav_order: 3
   </div>
 
   <ol class="appearance-list">
+    <li>
+      <time datetime="2026-10-06">2026</time>
+      <div>
+        <h3>Financial Inclusion Week 2026</h3>
+        <p>
+          Panelist · <em>Building Inclusion in Digital Public Infrastructure: Research from Global DPI Insights Community</em> · Center for
+          Financial Inclusion (CFI) · Virtual · October 6
+        </p>
+        <a href="https://www.centerforfinancialinclusion.org/convenings/financial-inclusion-week/">Event and recording access</a>
+      </div>
+    </li>
     <li>
       <time>2026</time>
       <div>
