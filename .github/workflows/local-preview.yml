@@ -2,10 +2,32 @@ name: Container preview smoke test
 on:
   push:
     branches: [main]
-    paths: [Dockerfile, docker-compose.yml, bin/entry_point.sh, Gemfile, Gemfile.lock, requirements.txt, ".github/workflows/local-preview.yml"]
+    paths:
+      [
+        Dockerfile,
+        docker-compose.yml,
+        bin/entry_point.sh,
+        Gemfile,
+        Gemfile.lock,
+        package.json,
+        package-lock.json,
+        requirements.txt,
+        ".github/workflows/local-preview.yml",
+      ]
   pull_request:
     branches: [main]
-    paths: [Dockerfile, docker-compose.yml, bin/entry_point.sh, Gemfile, Gemfile.lock, requirements.txt, ".github/workflows/local-preview.yml"]
+    paths:
+      [
+        Dockerfile,
+        docker-compose.yml,
+        bin/entry_point.sh,
+        Gemfile,
+        Gemfile.lock,
+        package.json,
+        package-lock.json,
+        requirements.txt,
+        ".github/workflows/local-preview.yml",
+      ]
   workflow_dispatch:
 permissions:
   contents: read

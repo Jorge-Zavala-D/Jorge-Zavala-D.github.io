@@ -27,6 +27,14 @@ GitHub Pages hosting and Overleaf-first CV. No plugin runtime fork or redesign.
 - Retired irrelevant upstream-demo publishing, badge, formatting-writer,
   RenderCV, TOC and citation workflows. CodeQL was re-enabled after GitHub's
   inactivity suspension. There is one publishing path and one CV source.
+- Pinned PurgeCSS's selector parser to patched version 7.1.6 after the refreshed
+  dependency audit identified
+  [GHSA-rj75-hqrm-r3gf](https://github.com/advisories/GHSA-rj75-hqrm-r3gf).
+  Kept PurgeCSS 7: version 8 brings a different unresolved `braces` advisory.
+  The lockfile and full-page screenshot gate verify this bounded dependency
+  override without changing the approved design.
+  The refreshed dependency audit reports zero known npm vulnerabilities; future
+  moderate-or-higher npm findings block publication.
 - Excluded development scripts/tests, documentation, caches, dependencies and
   the unused RenderCV demo from the public build. Normalized line endings and
   corrected the formatter's Windows handling.

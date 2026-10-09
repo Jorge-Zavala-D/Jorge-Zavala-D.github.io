@@ -15,5 +15,10 @@
     "pngjs": "^7.0.0",
     "prettier": "^3.8.0",
     "purgecss": "7.0.2"
+  },
+  "overrides": {
+    "purgecss": {
+      "postcss-selector-parser": "7.1.6"
+    }
   }
 }
