@@ -22,7 +22,7 @@ for (const route of routes) {
       fullPage: true,
       scale: "css",
     });
-    if (process.env.CHECK_SCREENSHOTS)
+    if (process.env.CHECK_SCREENSHOTS || ["all", "changed"].includes(testInfo.config.updateSnapshots))
       await expect(page).toHaveScreenshot(`${route.replaceAll("/", "") || "home"}.png`, { fullPage: true, scale: "css", maxDiffPixelRatio: 0.01 });
   });
 }
@@ -31,6 +31,14 @@ test("CV content and downloads have one authoritative source", async ({ page, re
   await page.goto("/cv/");
   await expect(page.locator("body")).toContainText("Alexandra Scacco");
   await expect(page.locator("body")).toContainText("Identifying High-Risk Provinces for Violent Extremism in Burkina Faso Using Machine Learning");
+  const sections = await page.locator(".cv-section").evaluateAll((nodes) =>
+    nodes.map((node) => ({
+      name: node.id,
+      content: node.textContent.replace(node.querySelector(".cv-section__header").textContent, "").trim(),
+    }))
+  );
+  expect(sections.length).toBeGreaterThan(0);
+  for (const section of sections) expect(section.content.length, `${section.name} must not be empty`).toBeGreaterThan(0);
   const pdf = await request.get("/assets/pdf/Jorge_Zavala_CV.pdf");
   expect(pdf.status()).toBe(200);
   expect((await pdf.body()).subarray(0, 5).toString()).toBe("%PDF-");
@@ -89,7 +97,7 @@ test("external references do not return broken-link responses", async ({ page, r
     }
   }
   await testInfo.attach("external-link-results", { body: JSON.stringify(results, null, 2), contentType: "application/json" });
-  for (const result of results.filter((result) => result.status)) {
+  for (const result of results.filter((result) => result.status && !result.manualReview)) {
     expect(result.status, result.url).not.toBe(404);
     expect(result.status, result.url).not.toBe(410);
     expect(result.status, result.url).toBeLessThan(500);

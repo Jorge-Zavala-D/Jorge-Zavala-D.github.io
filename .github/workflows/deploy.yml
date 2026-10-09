@@ -32,7 +32,7 @@ jobs:
       - run: npx playwright install --with-deps chromium webkit
       - name: Accessibility, responsive layout, links and CV checks
         env:
-          CHECK_SCREENSHOTS: ${{ hashFiles('test/visual/site.spec.js-snapshots/*.png') != '' && '1' || '' }}
+          CHECK_SCREENSHOTS: "1"
         run: npm run test:visual
       - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         if: always() && steps.production.outcome == 'success'
