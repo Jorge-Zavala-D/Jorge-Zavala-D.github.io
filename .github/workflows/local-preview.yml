@@ -12,6 +12,7 @@ on:
         package.json,
         package-lock.json,
         requirements.txt,
+        bin/audit-dependencies,
         ".github/workflows/local-preview.yml",
       ]
   pull_request:
@@ -26,6 +27,7 @@ on:
         package.json,
         package-lock.json,
         requirements.txt,
+        bin/audit-dependencies,
         ".github/workflows/local-preview.yml",
       ]
   workflow_dispatch:
@@ -38,6 +40,8 @@ jobs:
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
       - run: docker compose up -d --build
+      - name: Audit the actual container Ruby and Python environment
+        run: docker compose exec -T jekyll bash bin/audit-dependencies
       - name: Verify root, CV and unchanged lockfile
         run: |
           curl --retry 40 --retry-delay 5 --retry-all-errors -fsS http://127.0.0.1:8080/ > /dev/null
@@ -46,5 +50,13 @@ jobs:
           git diff --exit-code -- Gemfile.lock
       - run: docker compose logs --tail=100
         if: always()
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        if: always()
+        with:
+          name: container-dependency-audit
+          path: |
+            output/ci/dependency-audit/*.json
+            output/ci/dependency-audit/*.txt
+            output/ci/dependency-audit/Gemfile.runtime.lock
       - run: docker compose down
         if: always()

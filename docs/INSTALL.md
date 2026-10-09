@@ -148,10 +148,9 @@ Assuming you have [Ruby](https://www.ruby-lang.org/en/downloads/) and [Bundler](
 ```bash
 bundle install
 # optional but recommended if you use jupyter posts:
-# installs jupyter + nbconvert for jekyll-jupyter-notebook
+# installs the pinned nbconvert for jekyll-jupyter-notebook in an isolated environment
 ./bin/setup-python-deps
-# or manually:
-# python3 -m pip install --user --break-system-packages jupyter nbconvert
+source .venv/bin/activate
 bundle exec jekyll serve
 ```
 
@@ -214,10 +213,10 @@ If you need to manually re-deploy your website to GitHub pages, go to Actions, c
    - Set **Publish directory** to `_site`
 
 4. Netlify: Add the following two **environment variables**
-   - | Key            | Value                                                                                  |
-     | -------------- | -------------------------------------------------------------------------------------- |
-     | `JEKYLL_ENV`   | `production`                                                                           |
-     | `RUBY_VERSION` | set to the Ruby version found in `.github/workflows/deploy.yml` (for example, `3.3.5`) |
+   - | Key            | Value                                                                           |
+     | -------------- | ------------------------------------------------------------------------------- |
+     | `JEKYLL_ENV`   | `production`                                                                    |
+     | `RUBY_VERSION` | use the Ruby version in `.github/actions/setup/action.yml` (currently `3.3.12`) |
 
 5. Netlify: Click **Deploy** and wait for the site to be published. If you want to use your own domain name, follow the steps in [this documentation](https://docs.netlify.com/domains-https/custom-domains/).
 

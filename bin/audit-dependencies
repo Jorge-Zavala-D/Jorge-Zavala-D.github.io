@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+audit_dir=output/ci/dependency-audit
+mkdir -p "$audit_dir"
+export BUNDLER_AUDIT_DB="$(pwd)/$audit_dir/ruby-advisory-db"
+gem install bundler-audit -v 0.9.3 --no-document
+bundle-audit check --update --format json --output "$audit_dir/ruby-lock.json"
+git -C "$BUNDLER_AUDIT_DB" rev-parse HEAD > "$audit_dir/ruby-advisory-db-revision.txt"
+
+# Include runtime gems absent from Gemfile.lock, using the versions selected by Bundler.
+ruby -rbundler -e '
+  specs = Gem::Specification.group_by(&:name).transform_values { |versions| versions.max_by(&:version) }
+  Bundler.load.specs.each { |spec| specs[spec.name] = spec }
+  abort "Missing runtime gem inventory" unless specs.key?("erb") && specs.key?("resolv")
+  File.write(ARGV.fetch(0), "GEM\n  remote: https://rubygems.org/\n  specs:\n" +
+    specs.values.sort_by(&:name).map { |spec| "    #{spec.name} (#{spec.version})\n" }.join +
+    "\nPLATFORMS\n  ruby\n\nDEPENDENCIES\n")
+' "$audit_dir/Gemfile.runtime.lock"
+bundle-audit check --gemfile-lock "$audit_dir/Gemfile.runtime.lock" --format json --output "$audit_dir/ruby-runtime.json"
+bundle exec ruby -rresolv -e 'abort "Unpatched active DNS resolver" unless Gem.loaded_specs.fetch("resolv").version >= Gem::Version.new("0.3.2")'
+
+# Keep the auditor separate so its dependencies cannot replace the site's packages.
+python3 -m pip freeze --all > "$audit_dir/python-installed.txt"
+python3 -m venv "$audit_dir/python-auditor"
+"$audit_dir/python-auditor/bin/python" -m pip install pip-audit==2.10.1
+"$audit_dir/python-auditor/bin/pip-audit" --path "$(python3 -c 'import sysconfig; print(sysconfig.get_path("purelib"))')" \
+  --format json --output "$audit_dir/python.json"
+
+python3 -m nbconvert assets/jupyter/blog.ipynb --to html --output-dir "$audit_dir" --output notebook-smoke.html
+grep -q 'sys.version_info' "$audit_dir/notebook-smoke.html"

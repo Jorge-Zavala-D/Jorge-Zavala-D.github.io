@@ -49,6 +49,11 @@ checks the deployed pages and external references, and measures the actual homep
 and CV with Lighthouse. Websites that block automated requests are reported for
 manual review, not falsely marked verified. Automated checks do not certify WCAG conformance.
 
+The release also requires Ruby lockfile/runtime and installed Python dependency audits;
+reports are retained in the **dependency-audit** artifact. The container preview audits its
+own environment, including its different Python version. See
+[`docs/DEPENDENCY_SECURITY_AUDIT_2026-10-10.md`](docs/DEPENDENCY_SECURITY_AUDIT_2026-10-10.md).
+
 ## Overleaf-first CV workflow
 
 The single English master is

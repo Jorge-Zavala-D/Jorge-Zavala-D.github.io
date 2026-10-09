@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-python3 -m pip install --user --break-system-packages -r requirements.txt
+python3 -m venv .venv
+.venv/bin/python -m pip install --upgrade pip==26.2.1
+.venv/bin/python -m pip install -r requirements.txt
+printf 'Before building or auditing the site, run: source .venv/bin/activate\n'

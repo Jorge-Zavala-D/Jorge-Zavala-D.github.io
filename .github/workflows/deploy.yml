@@ -23,6 +23,8 @@ jobs:
       - run: npm run lint:prettier && npm run lint:style-contract
       - name: Check build dependencies for known vulnerabilities
         run: npm audit --audit-level=moderate
+      - name: Audit Ruby, runtime gems and installed Python dependencies
+        run: bash bin/audit-dependencies
       - run: node --test test/wait-for-live-cv.test.js
       - name: Build production site
         id: production
@@ -47,6 +49,14 @@ jobs:
         with:
           name: browser-checks
           path: output/playwright/
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        if: always()
+        with:
+          name: dependency-audit
+          path: |
+            output/ci/dependency-audit/*.json
+            output/ci/dependency-audit/*.txt
+            output/ci/dependency-audit/Gemfile.runtime.lock
   publish:
     needs: build
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'

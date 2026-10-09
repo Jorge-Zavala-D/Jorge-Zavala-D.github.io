@@ -174,12 +174,14 @@ Recommended options:
 
 ```bash
 ./bin/setup-python-deps
+source .venv/bin/activate
 ```
 
 2. Or install manually in your Python environment:
 
 ```bash
-python3 -m pip install --user --break-system-packages jupyter nbconvert
+python3 -m pip install --upgrade pip==26.2.1
+python3 -m pip install -r requirements.txt
 ```
 
 3. If you do not need notebook rendering, disable/remove the plugin from `_config.yml`.
