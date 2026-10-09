@@ -28,6 +28,13 @@ locks the patched 0.5.15 maintenance branch and checks its active version. This 
 illustrates why the installed Linux runtime is checked separately from both the
 project lockfile and the temporary Windows audit-tool environment.
 
+The Python 3.11 preview environment also includes `setuptools` 66.1.1 from its
+bootstrap. Its audit detected [CVE-2025-47273](https://github.com/advisories/GHSA-5rjg-fvgr-3xxf),
+[CVE-2024-6345](https://github.com/advisories/GHSA-cx63-2mw6-8hw5) and
+[CVE-2026-59890](https://github.com/advisories/GHSA-h35f-9h28-mq5c). The shared requirements
+now pin patched `setuptools` 83.0.0, including for environments whose Python bootstrap
+would otherwise leave an old copy installed.
+
 All 44 configured `{{version}}` library URLs are expanded to their existing version
 numbers. Their resolved URLs, integrity hashes and library versions are unchanged.
 When updating a library in `_config.yml`, update its explicit URL and its version
@@ -43,7 +50,7 @@ Both installation paths use pip 26.2.1 and the same `requirements.txt`.
 
 Baseline audits returned nonzero exit codes and detected the findings above.
 After the repair, the local Ruby lockfile audit reports zero findings, and the
-fresh Windows Python 3.13 environment reports zero findings across 32 packages,
+fresh Windows Python 3.13 environment reports zero findings across 33 packages,
 including pip. The real `assets/jupyter/blog.ipynb` converts to HTML without
 executing its cells and retains its source content.
 
