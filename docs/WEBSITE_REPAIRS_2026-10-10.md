@@ -24,6 +24,10 @@ GitHub Pages hosting and Overleaf-first CV. No plugin runtime fork or redesign.
   the deployed pages, external references and Lighthouse measurements of the
   homepage and CV. Blocked external requests are reported for manual review;
   missing pages and genuine server errors still fail the check.
+- Connected the homepage portrait to the existing ImageMagick-generated
+  responsive WebP variants. The original JPEG remains the fallback; the photo,
+  crop, dimensions and styling are unchanged. Browser checks verify that the
+  optimized portrait actually loads on desktop and mobile.
 - Retired irrelevant upstream-demo publishing, badge, formatting-writer,
   RenderCV, TOC and citation workflows. CodeQL was re-enabled after GitHub's
   inactivity suspension. There is one publishing path and one CV source.

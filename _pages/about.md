@@ -33,6 +33,12 @@ description: Political economist studying conflict, transitional justice, develo
       </div>
     </div>
     <figure class="hero__portrait">
+      <picture>
+        <source
+          type="image/webp"
+          srcset="{{ '/assets/img/jorge-zavala-profile-480.webp' | relative_url }} 480w, {{ '/assets/img/jorge-zavala-profile-800.webp' | relative_url }} 800w, {{ '/assets/img/jorge-zavala-profile-1400.webp' | relative_url }} 1400w"
+          sizes="(max-width: 760px) 100vw, 420px"
+        >
       <img
         src="{{ '/assets/img/jorge-zavala-profile.jpg' | relative_url }}"
         alt="Portrait of Jorge E. Zavala"
@@ -40,6 +46,7 @@ description: Political economist studying conflict, transitional justice, develo
         height="1013"
         fetchpriority="high"
       >
+      </picture>
       <figcaption>Berlin · Lima · fieldwork across the Global South</figcaption>
     </figure>
   </section>

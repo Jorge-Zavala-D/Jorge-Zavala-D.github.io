@@ -8,6 +8,12 @@ for (const route of routes) {
     page.on("pageerror", (error) => errors.push(error.message));
     const response = await page.goto(route);
     expect(response.status()).toBe(200);
+    if (route === "/") {
+      const portrait = page.locator(".hero__portrait img");
+      await expect(portrait).toHaveJSProperty("complete", true);
+      expect(await portrait.evaluate((img) => img.naturalWidth)).toBeGreaterThan(0);
+      expect(await portrait.evaluate((img) => img.currentSrc)).toMatch(/jorge-zavala-profile-(480|800|1400)\.webp$/);
+    }
     await expect(page.locator('link[rel="stylesheet"][href*="/assets/css/main.css"]')).toHaveCount(1);
     await page.evaluate(() => document.fonts.ready);
     const results = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]).analyze();
