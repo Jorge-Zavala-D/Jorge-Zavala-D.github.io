@@ -19,6 +19,7 @@ ruby -rbundler -e '
 ' "$audit_dir/Gemfile.runtime.lock"
 bundle-audit check --gemfile-lock "$audit_dir/Gemfile.runtime.lock" --format json --output "$audit_dir/ruby-runtime.json"
 bundle exec ruby -rresolv -e 'abort "Unpatched active DNS resolver" unless Gem.loaded_specs.fetch("resolv").version >= Gem::Version.new("0.3.2")'
+bundle exec ruby -rnet/imap -e 'abort "Unpatched active IMAP library" unless Gem.loaded_specs.fetch("net-imap").version >= Gem::Version.new("0.5.15")'
 
 # Keep the auditor separate so its dependencies cannot replace the site's packages.
 python3 -m pip freeze --all > "$audit_dir/python-installed.txt"

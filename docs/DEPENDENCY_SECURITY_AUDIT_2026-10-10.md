@@ -19,6 +19,15 @@ downloader. Neither local downloading nor lightbox/zoom features are used by thi
 website. Removing both avoids a vulnerable dependency, a forced incompatible
 upgrade, or a starter-local fork of plugin runtime code.
 
+The actual Linux container runtime audit also detected three existing advisories
+in bundled `net-imap` 0.4.25: [CVE-2026-47240](https://github.com/advisories/GHSA-8p34-64r3-mwg8),
+[CVE-2026-47241](https://github.com/advisories/GHSA-c4fp-cxrr-mj66) and
+[CVE-2026-47242](https://github.com/advisories/GHSA-46q3-7gv7-qmgg), covering command injection
+and denial of service. The audit failed before publication. The website now explicitly
+locks the patched 0.5.15 maintenance branch and checks its active version. This finding
+illustrates why the installed Linux runtime is checked separately from both the
+project lockfile and the temporary Windows audit-tool environment.
+
 All 44 configured `{{version}}` library URLs are expanded to their existing version
 numbers. Their resolved URLs, integrity hashes and library versions are unchanged.
 When updating a library in `_config.yml`, update its explicit URL and its version
@@ -44,7 +53,7 @@ executing its cells and retains its source content.
    Ruby Advisory Database; records the database's exact Git revision.
 2. Inventories installed runtime gems absent from the lockfile, substitutes
    the site's actual locked versions, and audits that inventory as well.
-   It also verifies that `bundle exec` activates a patched DNS resolver.
+   It also verifies that `bundle exec` activates patched DNS and IMAP libraries.
 3. Runs pinned `pip-audit` 2.10.1 from a separate auditor environment against
    the actual website Python package directory, including installation tools.
    The auditor's dependencies cannot upgrade or mask the website's dependencies.

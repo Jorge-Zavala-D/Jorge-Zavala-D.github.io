@@ -30,6 +30,7 @@ end
 # Gems for development or external data fetching (outside :jekyll_plugins)
 group :other_plugins do
     gem 'resolv', '~> 0.3.2' # patched DNS resolver for Ruby 3.3
+    gem 'net-imap', '~> 0.5.15' # patched replacement for Ruby's bundled IMAP gem
     gem 'observer'       # used by jekyll-scholar
     gem 'ostruct'        # used by jekyll-twitter-plugin
     # gem 'terser'         # used by jekyll-terser
