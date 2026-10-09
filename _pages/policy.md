@@ -23,7 +23,7 @@ nav_order: 3
     <h2>Building Inclusion in Digital Public Infrastructure: Research from Global DPI Insights Community</h2>
     <p>
       At Financial Inclusion Week 2026, convened by the Center for Financial Inclusion (CFI), I joined a research panel on inclusive digital
-      public infrastructure. Drawing on <em>Digital Bridges to Financial Inclusion</em>, joint work with Angélica Cardozo Cadavid, I discussed
+      public infrastructure. Drawing on Digital Bridges for Financial Inclusion, joint work with Angélica Cardozo Cadavid, I discussed
       migrant women's financial inclusion in Colombia, cross-border remittances, trust, and consumer protection.
     </p>
     <a class="text-link" href="https://www.centerforfinancialinclusion.org/convenings/financial-inclusion-week/"
