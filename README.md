@@ -9,6 +9,11 @@ Built with Jekyll and al-folio's pinned plugin gems. Live at
 
 Work locally in `C:\Users\jzava\Documents\GitHub\Jorge-Zavala-D.github.io`.
 
+Keep this clone on `main` for all source edits and commits. `gh-pages` contains only
+generated deployment output and is committed automatically by the deployment workflow;
+do not switch to it to edit or verify the website. Local dependencies and test output
+are ignored on `main` and must never be committed to either branch.
+
 - `_pages/about.md` — homepage and research overview
 - `_pages/research.md` and `_bibliography/papers.bib` — academic research
 - `_pages/policy.md` — applied research, public writing, and talks

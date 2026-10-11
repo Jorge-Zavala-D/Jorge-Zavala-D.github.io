@@ -54,8 +54,9 @@ test("the new work in progress is listed once with consistent public metadata", 
   const title = "Evaluating Coercive Governments Abroad: Threat, Performance, and Electoral Democracy";
   for (const route of ["/", "/research/", "/publications/", "/cv/"]) {
     await page.goto(route);
-    const project = page.locator("article").filter({ has: page.getByRole("heading", { name: title }) });
-    await expect(project).toHaveCount(1);
+    const heading = page.getByRole("heading", { name: title });
+    await expect(heading).toHaveCount(1);
+    const project = heading.locator("xpath=ancestor::article[1]");
     await expect(project).toContainText("With Daniel Kuhlen and Giovanna Lapresa");
     await expect(project).toContainText(/working title/i);
     await expect(project).toContainText("Work in progress");
