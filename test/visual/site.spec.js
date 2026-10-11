@@ -50,6 +50,19 @@ test("CV content and downloads have one authoritative source", async ({ page, re
   expect((await pdf.body()).subarray(0, 5).toString()).toBe("%PDF-");
 });
 
+test("the new work in progress is listed once with consistent public metadata", async ({ page }) => {
+  const title = "Evaluating Coercive Governments Abroad: Threat, Performance, and Electoral Democracy";
+  for (const route of ["/", "/research/", "/publications/", "/cv/"]) {
+    await page.goto(route);
+    const project = page.locator("article").filter({ has: page.getByRole("heading", { name: title }) });
+    await expect(project).toHaveCount(1);
+    await expect(project).toContainText("With Daniel Kuhlen and Giovanna Lapresa");
+    await expect(project).toContainText(/working title/i);
+    await expect(project).toContainText("Work in progress");
+    await expect(project.locator('a[href*=".pdf"], a[href*="doi.org"]')).toHaveCount(0);
+  }
+});
+
 test("development files are not published", async ({ request }) => {
   for (const path of [
     "/scripts/sync-cv.ps1",

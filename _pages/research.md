@@ -121,6 +121,20 @@ nav_order: 1
   </div>
 
   <div class="compact-projects">
+    <article id="coercive-governments">
+      <p class="work-card__meta"><span>Political behavior</span><span>Germany</span></p>
+      <h3>Evaluating Coercive Governments Abroad: Threat, Performance, and Electoral Democracy</h3>
+      <p class="work-card__subtitle">Working title · With Daniel Kuhlen and Giovanna Lapresa</p>
+      <p>
+        This project studies how people in Germany evaluate coercive governments abroad.
+        A paired-profile survey experiment varies threat descriptions, security-performance
+        information, and electoral institutions to examine the choice of a foreign
+        police-learning partner. The analysis distinguishes relative partner preferences
+        from approval of coercion and tests a pre-analysis-plan account of threat and
+        perceived effectiveness.
+      </p>
+      <p class="project-facts">Paired-profile survey experiment · Work in progress</p>
+    </article>
     <article>
       <p class="work-card__meta"><span>Mental health &amp; peacebuilding</span><span>Nigeria</span></p>
       <h3>Evaluating CBT Group Interventions in Conflict-Affected Nigerian Communities</h3>

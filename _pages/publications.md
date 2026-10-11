@@ -16,6 +16,22 @@ nav_order: 2
   </p>
 </div>
 
+<section class="research-section" aria-labelledby="work-in-progress-title">
+  <h2 id="work-in-progress-title">Work in progress</h2>
+  <div class="compact-projects">
+    <article>
+      <h3>Evaluating Coercive Governments Abroad: Threat, Performance, and Electoral Democracy</h3>
+      <p class="work-card__subtitle">Working title · With Daniel Kuhlen and Giovanna Lapresa</p>
+      <p>
+        A German survey experiment on how threat descriptions, performance information,
+        and electoral institutions shape preferences for foreign police-learning partners.
+      </p>
+      <p class="project-facts">Work in progress</p>
+      <a class="text-link" href="{{ '/research/#coercive-governments' | relative_url }}">Project overview <span aria-hidden="true">→</span></a>
+    </article>
+  </div>
+</section>
+
 {% include bib_search.liquid %}
 
 <div class="publications">

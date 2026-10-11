@@ -137,6 +137,18 @@ description: Political economist studying conflict, transitional justice, develo
           violence, and violent socialization within households and schools.
         </p>
       </article>
+      <article class="work-card">
+        <div class="work-card__meta">
+          <span>Work in progress</span>
+          <span>Survey experiment</span>
+        </div>
+        <h3>Evaluating Coercive Governments Abroad: Threat, Performance, and Electoral Democracy</h3>
+        <p class="work-card__subtitle">Working title · With Daniel Kuhlen and Giovanna Lapresa</p>
+        <p>
+          A German survey experiment on how threat descriptions, performance information,
+          and electoral institutions shape preferences for foreign police-learning partners.
+        </p>
+      </article>
     </div>
 
   </section>
