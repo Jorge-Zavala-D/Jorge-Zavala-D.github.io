@@ -3,6 +3,8 @@ description: Install the pinned website build and test dependencies.
 runs:
   using: composite
   steps:
+    - run: bash bin/configure-apt-mirror
+      shell: bash
     - uses: ruby/setup-ruby@e81a8fa391b11a595c1b7ed84177cc0fe02faf83 # v1, 2026-10-10
       with:
         ruby-version: "3.3.12"

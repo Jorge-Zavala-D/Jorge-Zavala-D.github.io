@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Avoid the Azure mirror download stalls observed on the hosted Ubuntu runners.
+if [[ -f /etc/apt/apt-mirrors.txt ]]; then
+  printf '%s\n' 'https://archive.ubuntu.com/ubuntu/' | sudo tee /etc/apt/apt-mirrors.txt >/dev/null
+  grep -qxF 'https://archive.ubuntu.com/ubuntu/' /etc/apt/apt-mirrors.txt
+fi

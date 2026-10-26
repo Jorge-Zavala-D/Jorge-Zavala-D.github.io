@@ -23,6 +23,7 @@ jobs:
         with:
           node-version: "24"
           cache: npm
+      - run: bash bin/configure-apt-mirror
       - run: npm ci && npx playwright install --with-deps chromium webkit
       - name: Wait for this exact release and reviewed CV to reach Pages
         run: node test/wait-for-live-cv.js

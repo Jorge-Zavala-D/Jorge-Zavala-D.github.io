@@ -98,6 +98,7 @@ test("Harris custom-program teaching keeps the three-course appointment and hist
 test("development files are not published", async ({ request }) => {
   for (const path of [
     "/scripts/sync-cv.ps1",
+    "/bin/configure-apt-mirror",
     "/test/style_contract.js",
     "/AGENTS.md",
     "/CLAUDE.md",
