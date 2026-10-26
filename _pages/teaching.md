@@ -33,6 +33,32 @@ nav_order: 4
   <p class="section-kicker">University teaching</p>
   <h2>Courses</h2>
   <div class="course-groups">
+    <article id="uchicago-gdp7">
+      <div class="course-groups__heading">
+        <h3>University of Chicago · Harris School of Public Policy</h3>
+        <span>October–November 2026</span>
+      </div>
+      <p class="quiet">Teaching Assistant (Custom Programs) · DSC GDP7 · Remote</p>
+      <p>
+        Teaching support for non-degree professional training for policy professionals in Saudi Arabia.
+        Instructor for all three courses: <strong>Sheng-Hao Lo</strong>.
+      </p>
+      <ul class="course-list">
+        <li>Advanced Policy Evaluation</li>
+        <li>Policy Analysis</li>
+        <li>Economic Modeling and Forecasting</li>
+      </ul>
+    </article>
+    <article id="uchicago-gdp6">
+      <div class="course-groups__heading">
+        <h3>University of Chicago · Harris School of Public Policy</h3>
+        <span>November 2025</span>
+      </div>
+      <p class="quiet">Teaching Assistant (Custom Programs) · DSC GDP6</p>
+      <ul class="course-list">
+        <li>Mastering Public Policy Practices</li>
+      </ul>
+    </article>
     <article>
       <div class="course-groups__heading">
         <h3>University of Chicago</h3>

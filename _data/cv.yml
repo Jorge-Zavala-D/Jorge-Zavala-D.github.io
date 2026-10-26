@@ -277,6 +277,17 @@ cv:
         summary: Multi-country survey harmonization, index construction, regression, and segmentation for Special Olympics.
 
     Teaching:
+      - company: University of Chicago, Harris School of Public Policy
+        position: Teaching Assistant (Custom Programs)
+        location: Remote
+        date: October–November 2026
+        start_date: 2026-10
+        end_date: 2026-11
+        summary: DSC GDP7, a non-degree professional training program for policy professionals in Saudi Arabia.
+        highlights:
+          - "Courses: Advanced Policy Evaluation; Policy Analysis; Economic Modeling and Forecasting."
+          - "Instructor for all three courses: Sheng-Hao Lo."
+
       - company: Hertie School
         position: Graduate Teaching Assistant
         location: Berlin, Germany
@@ -285,6 +296,13 @@ cv:
         highlights:
           - "GRAD-C6-2001: Statistics II: Statistical Modeling and Causal Inference."
           - "GRAD-C5: Statistics I: Inference and Regression."
+
+      - company: University of Chicago, Harris School of Public Policy
+        position: Teaching Assistant (Custom Programs)
+        date: November 2025
+        start_date: 2025-11
+        end_date: 2025-11
+        summary: "Mastering Public Policy Practices (DSC GDP6)."
 
       - company: ProImpacto
         position: Lecturer, Impact Evaluation Diploma

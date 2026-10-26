@@ -64,6 +64,37 @@ test("the new work in progress is listed once with consistent public metadata", 
   }
 });
 
+test("Harris custom-program teaching keeps the three-course appointment and historical roles distinct", async ({ page }) => {
+  for (const route of ["/teaching/", "/cv/"]) {
+    await page.goto(route);
+    const appointment = route === "/teaching/" ? page.locator("#uchicago-gdp7") : page.locator("#teaching .cv-entry").filter({ hasText: "DSC GDP7" });
+    await expect(appointment).toHaveCount(1);
+    for (const text of [
+      "Advanced Policy Evaluation",
+      "Policy Analysis",
+      "Economic Modeling and Forecasting",
+      "Sheng-Hao Lo",
+      "October–November 2026",
+      "Remote",
+      "non-degree professional training",
+      "Saudi Arabia",
+    ]) {
+      await expect(appointment).toContainText(text, { ignoreCase: true });
+    }
+    const previousAppointment =
+      route === "/teaching/" ? page.locator("#uchicago-gdp6") : page.locator("#teaching .cv-entry").filter({ hasText: "DSC GDP6" });
+    await expect(previousAppointment).toHaveCount(1);
+    await expect(previousAppointment).toContainText("November 2025");
+    await expect(previousAppointment).toContainText("Mastering Public Policy Practices");
+    for (const text of ["Statistics I", "Statistics II", "Math and Coding Camp", "Economics for Public Policy", "Econometrics I"]) {
+      await expect(page.locator("body")).toContainText(text);
+    }
+  }
+  await page.goto("/");
+  await expect(page.locator(".appointments")).toContainText("University of Chicago, Harris School of Public Policy");
+  await expect(page.locator(".appointments")).toContainText("Hertie School");
+});
+
 test("development files are not published", async ({ request }) => {
   for (const path of [
     "/scripts/sync-cv.ps1",

@@ -160,6 +160,11 @@ description: Political economist studying conflict, transitional justice, develo
       <ul class="clean-list appointments">
         <li><strong>Doctoral Researcher</strong><span>Humboldt-Universität zu Berlin</span></li>
         <li><strong>Research Fellow</strong><span>WZB Berlin Social Science Center</span></li>
+        <li><strong>Teaching Assistant</strong><span>Hertie School · Statistics I &amp; II</span></li>
+        <li>
+          <strong>Teaching Assistant · Oct–Nov 2026</strong>
+          <span>University of Chicago, Harris School of Public Policy · Custom Programs (remote)</span>
+        </li>
       </ul>
     </div>
     <aside class="field-note">
