@@ -96,8 +96,8 @@ test("Harris custom-program teaching keeps the three-course appointment and hist
 });
 
 test("Peru research additions keep ongoing research and database development separate from dissertation papers", async ({ page }) => {
-  const reparations = "Political Economy of Collective Reparations in Peru";
-  const database = "Social Conflict and State Response in Peru: A Relational Database";
+  const reparations = "Zavala, Jorge (2026). Political Economy of Collective Reparations in Peru";
+  const database = "Zavala, Jorge (2026). Social Conflict and State Response in Peru: A Relational Database";
   await page.goto("/");
   const homeProjects = page.locator("#potential-dissertation-chapters");
   await expect(homeProjects.locator("article")).toHaveCount(2);
@@ -116,7 +116,8 @@ test("Peru research additions keep ongoing research and database development sep
     [database, "peru-social-conflict-database"],
   ]) {
     const card = homeProjects.getByRole("heading", { name: title, exact: true }).locator("xpath=ancestor::article[1]");
-    await expect(card).toContainText("Jorge E. Zavala · Sole author");
+    await expect(card.getByRole("heading", { name: title, exact: true })).toHaveCount(1);
+    await expect(card).not.toContainText(/sole[- ]author/i);
     await card.getByRole("link", { name: "Project overview" }).click();
     await expect(page).toHaveURL(new RegExp(`/research/#${anchor}$`));
     await expect(page.locator(`#${anchor}`)).toBeInViewport();
@@ -129,7 +130,7 @@ test("Peru research additions keep ongoing research and database development sep
   await expect(allocation).toContainText("Work in progress");
   await expect(allocation).toContainText("reported transfers, expenditure, and project implementation");
   await expect(allocation.locator("a")).toHaveCount(0);
-  await expect(allocation.locator(".byline")).toHaveText("Jorge E. Zavala · Sole author");
+  await expect(allocation.locator(".byline")).toHaveCount(0);
   await expect(allocation).toContainText("Potential dissertation book chapter");
   const infrastructure = page.locator("#peru-social-conflict-database");
   await expect(infrastructure.getByRole("heading", { name: database, exact: true })).toHaveCount(1);
@@ -141,12 +142,12 @@ test("Peru research additions keep ongoing research and database development sep
     "https://github.com/Jorge-Zavala-D/peru-conflict-data"
   );
   await expect(infrastructure.locator('a[href*=".pdf"], a[href*="doi.org"], a[download]')).toHaveCount(0);
-  await expect(infrastructure.locator(".byline")).toHaveText("Jorge E. Zavala · Sole author");
+  await expect(infrastructure.locator(".byline")).toHaveCount(0);
   await expect(infrastructure).toContainText("Potential dissertation book chapter");
   await page.goto("/publications/");
   const listing = page.getByRole("heading", { name: reparations, exact: true }).locator("xpath=ancestor::article[1]");
   await expect(listing).toContainText("Work in progress");
-  await expect(listing).toContainText("Jorge E. Zavala · Sole author");
+  await expect(listing).not.toContainText(/sole[- ]author/i);
   await expect(listing).toContainText("Potential dissertation book chapter");
   await listing.getByRole("link", { name: "Project overview" }).click();
   await expect(page).toHaveURL(/\/research\/#political-economy-reparations$/);
@@ -158,7 +159,7 @@ test("Peru research additions keep ongoing research and database development sep
   for (const title of [reparations, database]) {
     const project = projects.getByRole("heading", { name: title, exact: true }).locator("xpath=ancestor::article[1]");
     await expect(project).toHaveCount(1);
-    await expect(project.locator(".cv-entry__authors")).toHaveText("Jorge E. Zavala (sole author)");
+    await expect(project.locator(".cv-entry__authors")).toHaveCount(0);
     await expect(project).toContainText("Potential dissertation book chapter");
   }
   await expect(projects.locator(".cv-entry").filter({ hasText: database })).toContainText("2026–present");
@@ -166,7 +167,7 @@ test("Peru research additions keep ongoing research and database development sep
   const publications = page.locator("#publications-and-work-in-progress");
   await expect(publications.getByRole("heading", { name: reparations, exact: true })).toHaveCount(1);
   const cvListing = publications.getByRole("heading", { name: reparations, exact: true }).locator("xpath=ancestor::article[1]");
-  await expect(cvListing.locator(".cv-entry__authors")).toHaveText("Jorge E. Zavala (sole author)");
+  await expect(cvListing.locator(".cv-entry__authors")).toHaveCount(0);
   await expect(cvListing).toContainText("Potential dissertation book chapter");
   await expect(publications.getByRole("heading", { name: database, exact: true })).toHaveCount(0);
 });

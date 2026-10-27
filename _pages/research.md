@@ -31,7 +31,7 @@ nav_order: 1
     information.
   </p>
   <p>
-    Two sole-authored projects on the political economy of reparations and social-conflict
+    Two projects on the political economy of reparations and social-conflict
     data infrastructure are also core parts of my developing PhD dissertation agenda and
     potential book chapters.
   </p>
@@ -128,9 +128,8 @@ nav_order: 1
   <div class="compact-projects">
     <article id="political-economy-reparations">
       <p class="work-card__meta"><span>Political economy</span><span>Collective reparations</span><span>Municipal elections</span></p>
-      <h3>Political Economy of Collective Reparations in Peru</h3>
+      <h3>Zavala, Jorge (2026). Political Economy of Collective Reparations in Peru</h3>
       <p class="work-card__subtitle">Electoral competition, political alignment, and the allocation of post-conflict reparations</p>
-      <p class="byline">Jorge E. Zavala · Sole author</p>
       <p>
         This project studies whether and how electoral competition and relations between local
         and national governments shape the allocation and implementation of collective reparations
@@ -147,9 +146,8 @@ nav_order: 1
 
     <article id="peru-social-conflict-database">
       <p class="work-card__meta"><span>Contentious politics</span><span>State–society relations</span><span>Research data infrastructure</span></p>
-      <h3>Social Conflict and State Response in Peru: A Relational Database</h3>
+      <h3>Zavala, Jorge (2026). Social Conflict and State Response in Peru: A Relational Database</h3>
       <p class="work-card__subtitle">Database in development · 2026–present</p>
-      <p class="byline">Jorge E. Zavala · Sole author</p>
       <p>
         I am developing a longitudinal relational database of social conflicts documented in the
         monthly reports of Peru's Defensoría del Pueblo (Ombudsman's Office). The project is designed

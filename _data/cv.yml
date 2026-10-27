@@ -144,17 +144,13 @@ cv:
         start_date: 2025
         end_date: present
 
-      - name: Political Economy of Collective Reparations in Peru
+      - name: Zavala, Jorge (2026). Political Economy of Collective Reparations in Peru
         date: Work in progress
-        authors:
-          - Jorge E. Zavala (sole author)
         summary: Reconstructing historical administrative and financial records of collective reparations and municipal electoral data to study political allocation and implementation in post-conflict Peru.
         highlights:
           - Potential dissertation book chapter.
-      - name: "Social Conflict and State Response in Peru: A Relational Database"
+      - name: "Zavala, Jorge (2026). Social Conflict and State Response in Peru: A Relational Database"
         date: 2026–present
-        authors:
-          - Jorge E. Zavala (sole author)
         summary: Research/data-infrastructure project, in development. Developing a longitudinal relational database from the monthly social-conflict reports of Peru's Defensoría del Pueblo, with documentary provenance and source-based validation, to support research on conflict trajectories and state–society relations.
         highlights:
           - Potential dissertation book chapter.
@@ -183,9 +179,7 @@ cv:
         end_date: present
 
     Publications and Work in Progress:
-      - title: Political Economy of Collective Reparations in Peru
-        authors:
-          - Jorge E. Zavala (sole author)
+      - title: Zavala, Jorge (2026). Political Economy of Collective Reparations in Peru
         publisher: Work in progress
         summary: Potential dissertation book chapter.
       - title: "Evaluating Coercive Governments Abroad: Threat, Performance, and Electoral Democracy (working title)"

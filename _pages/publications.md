@@ -20,8 +20,7 @@ nav_order: 2
   <h2 id="work-in-progress-title">Work in progress</h2>
   <div class="compact-projects">
     <article>
-      <h3>Political Economy of Collective Reparations in Peru</h3>
-      <p class="work-card__subtitle">Jorge E. Zavala · Sole author</p>
+      <h3>Zavala, Jorge (2026). Political Economy of Collective Reparations in Peru</h3>
       <p>
         An ongoing study of electoral competition, intergovernmental political alignment,
         and the allocation and implementation of collective reparations in Peru, supported
