@@ -153,6 +153,32 @@ description: Political economist studying conflict, transitional justice, develo
 
   </section>
 
+  <section class="home-section home-section--stacked" id="potential-dissertation-chapters" aria-labelledby="potential-chapters-title">
+    <div class="section-heading">
+      <div>
+        <p class="section-kicker">Developing dissertation agenda</p>
+        <h2 id="potential-chapters-title">Potential book chapters</h2>
+      </div>
+    </div>
+    <p>These sole-authored projects are core parts of my PhD dissertation agenda and are being developed as potential book chapters.</p>
+    <div class="compact-projects">
+      <article>
+        <p class="work-card__meta"><span>Political economy</span><span>Work in progress</span></p>
+        <h3>Political Economy of Collective Reparations in Peru</h3>
+        <p class="work-card__subtitle">Jorge E. Zavala · Sole author</p>
+        <p>Studying electoral competition, political alignment, and the allocation and implementation of collective reparations in Peru through historical administrative, financial, and municipal electoral records.</p>
+        <a class="text-link" href="{{ '/research/#political-economy-reparations' | relative_url }}">Project overview <span aria-hidden="true">→</span></a>
+      </article>
+      <article>
+        <p class="work-card__meta"><span>Database in development</span><span>2026–present</span></p>
+        <h3>Social Conflict and State Response in Peru: A Relational Database</h3>
+        <p class="work-card__subtitle">Jorge E. Zavala · Sole author</p>
+        <p>Developing a longitudinal relational database from Peru's Defensoría del Pueblo reports to study social-conflict trajectories, mediation, and state–society relations. Construction and validation are ongoing.</p>
+        <a class="text-link" href="{{ '/research/#peru-social-conflict-database' | relative_url }}">Project overview <span aria-hidden="true">→</span></a>
+      </article>
+    </div>
+  </section>
+
   <section class="home-section home-section--split">
     <div>
       <p class="section-kicker">Now</p>

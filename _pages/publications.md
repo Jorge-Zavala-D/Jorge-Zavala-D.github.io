@@ -21,12 +21,13 @@ nav_order: 2
   <div class="compact-projects">
     <article>
       <h3>Political Economy of Collective Reparations in Peru</h3>
+      <p class="work-card__subtitle">Jorge E. Zavala · Sole author</p>
       <p>
         An ongoing study of electoral competition, intergovernmental political alignment,
         and the allocation and implementation of collective reparations in Peru, supported
         by the reconstruction of historical administrative, financial, and municipal electoral records.
       </p>
-      <p class="project-facts">Work in progress</p>
+      <p class="project-facts">Work in progress · Potential dissertation book chapter</p>
       <a class="text-link" href="{{ '/research/#political-economy-reparations' | relative_url }}">Project overview <span aria-hidden="true">→</span></a>
     </article>
     <article>

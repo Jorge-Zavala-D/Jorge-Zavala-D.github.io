@@ -30,6 +30,11 @@ nav_order: 1
     collective reparations, and one randomized field experiment on transitional-justice
     information.
   </p>
+  <p>
+    Two sole-authored projects on the political economy of reparations and social-conflict
+    data infrastructure are also core parts of my developing PhD dissertation agenda and
+    potential book chapters.
+  </p>
   <p class="quiet">
     Supervisors: Macartan Humphreys, Anselm Hager, and Alexandra Scacco.
   </p>
@@ -115,7 +120,7 @@ nav_order: 1
 <section class="research-section">
   <div class="section-heading">
     <div>
-      <p class="section-kicker">Ongoing research</p>
+      <p class="section-kicker">Developing dissertation agenda</p>
       <h2>Political economy and data infrastructure</h2>
     </div>
   </div>
@@ -125,6 +130,7 @@ nav_order: 1
       <p class="work-card__meta"><span>Political economy</span><span>Collective reparations</span><span>Municipal elections</span></p>
       <h3>Political Economy of Collective Reparations in Peru</h3>
       <p class="work-card__subtitle">Electoral competition, political alignment, and the allocation of post-conflict reparations</p>
+      <p class="byline">Jorge E. Zavala · Sole author</p>
       <p>
         This project studies whether and how electoral competition and relations between local
         and national governments shape the allocation and implementation of collective reparations
@@ -136,13 +142,14 @@ nav_order: 1
         unfolds. It also develops historical data infrastructure for further research on transitional
         justice, distributive politics, and state capacity.
       </p>
-      <p class="project-facts">Work in progress · Historical data construction and research-design development</p>
+      <p class="project-facts">Work in progress · Potential dissertation book chapter · Historical data construction and research-design development</p>
     </article>
 
     <article id="peru-social-conflict-database">
       <p class="work-card__meta"><span>Contentious politics</span><span>State–society relations</span><span>Research data infrastructure</span></p>
       <h3>Social Conflict and State Response in Peru: A Relational Database</h3>
       <p class="work-card__subtitle">Database in development · 2026–present</p>
+      <p class="byline">Jorge E. Zavala · Sole author</p>
       <p>
         I am developing a longitudinal relational database of social conflicts documented in the
         monthly reports of Peru's Defensoría del Pueblo (Ombudsman's Office). The project is designed
@@ -153,6 +160,7 @@ nav_order: 1
         trajectories, and state–society relations in Peru. Data construction and validation are
         ongoing; a first public release is planned.
       </p>
+      <p class="project-facts">Potential dissertation book chapter</p>
       <a class="text-link" href="https://github.com/Jorge-Zavala-D/peru-conflict-data">Development repository <span aria-hidden="true">→</span></a>
     </article>
 
