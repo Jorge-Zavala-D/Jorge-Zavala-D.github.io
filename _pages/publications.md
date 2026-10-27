@@ -20,6 +20,16 @@ nav_order: 2
   <h2 id="work-in-progress-title">Work in progress</h2>
   <div class="compact-projects">
     <article>
+      <h3>Political Economy of Collective Reparations in Peru</h3>
+      <p>
+        An ongoing study of electoral competition, intergovernmental political alignment,
+        and the allocation and implementation of collective reparations in Peru, supported
+        by the reconstruction of historical administrative, financial, and municipal electoral records.
+      </p>
+      <p class="project-facts">Work in progress</p>
+      <a class="text-link" href="{{ '/research/#political-economy-reparations' | relative_url }}">Project overview <span aria-hidden="true">→</span></a>
+    </article>
+    <article>
       <h3>Evaluating Coercive Governments Abroad: Threat, Performance, and Electoral Democracy</h3>
       <p class="work-card__subtitle">Working title · With Daniel Kuhlen and Giovanna Lapresa</p>
       <p>

@@ -95,6 +95,44 @@ test("Harris custom-program teaching keeps the three-course appointment and hist
   await expect(page.locator(".appointments")).toContainText("Hertie School");
 });
 
+test("Peru research additions keep ongoing research and database development separate from dissertation papers", async ({ page }) => {
+  const reparations = "Political Economy of Collective Reparations in Peru";
+  const database = "Social Conflict and State Response in Peru: A Relational Database";
+  await page.goto("/research/");
+  await expect(page.locator(".research-paper")).toHaveCount(3);
+  const allocation = page.locator("#political-economy-reparations");
+  await expect(allocation.getByRole("heading", { name: reparations, exact: true })).toHaveCount(1);
+  await expect(allocation).toContainText("Work in progress");
+  await expect(allocation).toContainText("reported transfers, expenditure, and project implementation");
+  await expect(allocation.locator("a, .byline")).toHaveCount(0);
+  const infrastructure = page.locator("#peru-social-conflict-database");
+  await expect(infrastructure.getByRole("heading", { name: database, exact: true })).toHaveCount(1);
+  await expect(infrastructure).toContainText("Database in development · 2026–present");
+  await expect(infrastructure).toContainText("designed to connect reported conflict cases over time");
+  await expect(infrastructure).toContainText("Defensoría del Pueblo");
+  await expect(infrastructure.getByRole("link", { name: "Development repository" })).toHaveAttribute(
+    "href",
+    "https://github.com/Jorge-Zavala-D/peru-conflict-data"
+  );
+  await expect(infrastructure.locator('a[href*=".pdf"], a[href*="doi.org"], a[download], .byline')).toHaveCount(0);
+  await page.goto("/publications/");
+  const listing = page.getByRole("heading", { name: reparations, exact: true }).locator("xpath=ancestor::article[1]");
+  await expect(listing).toContainText("Work in progress");
+  await listing.getByRole("link", { name: "Project overview" }).click();
+  await expect(page).toHaveURL(/\/research\/#political-economy-reparations$/);
+  await expect(allocation).toBeInViewport();
+  await page.goto("/cv/");
+  const projects = page.locator("#current-research-projects");
+  await expect(projects.locator(".cv-entry")).toHaveCount(6);
+  await expect(projects.locator(".cv-section__header")).toContainText("6 entries");
+  for (const title of [reparations, database]) await expect(projects.getByRole("heading", { name: title, exact: true })).toHaveCount(1);
+  await expect(projects.locator(".cv-entry").filter({ hasText: database })).toContainText("2026–present");
+  await expect(projects.locator(".cv-entry").filter({ hasText: database })).toContainText("in development");
+  const publications = page.locator("#publications-and-work-in-progress");
+  await expect(publications.getByRole("heading", { name: reparations, exact: true })).toHaveCount(1);
+  await expect(publications.getByRole("heading", { name: database, exact: true })).toHaveCount(0);
+});
+
 test("development files are not published", async ({ request }) => {
   for (const path of [
     "/scripts/sync-cv.ps1",

@@ -115,6 +115,53 @@ nav_order: 1
 <section class="research-section">
   <div class="section-heading">
     <div>
+      <p class="section-kicker">Ongoing research</p>
+      <h2>Political economy and data infrastructure</h2>
+    </div>
+  </div>
+
+  <div class="compact-projects">
+    <article id="political-economy-reparations">
+      <p class="work-card__meta"><span>Political economy</span><span>Collective reparations</span><span>Municipal elections</span></p>
+      <h3>Political Economy of Collective Reparations in Peru</h3>
+      <p class="work-card__subtitle">Electoral competition, political alignment, and the allocation of post-conflict reparations</p>
+      <p>
+        This project studies whether and how electoral competition and relations between local
+        and national governments shape the allocation and implementation of collective reparations
+        in post-conflict Peru. It reconstructs the administrative and financial histories of Peru's
+        Collective Reparations Program and links them to municipal electoral records and historical
+        geography. The data construction distinguishes legal authorizations, budget appropriations,
+        reported transfers, expenditure, and project implementation. The project examines which
+        communities are selected for reparations, when interventions advance, and how implementation
+        unfolds. It also develops historical data infrastructure for further research on transitional
+        justice, distributive politics, and state capacity.
+      </p>
+      <p class="project-facts">Work in progress · Historical data construction and research-design development</p>
+    </article>
+
+    <article id="peru-social-conflict-database">
+      <p class="work-card__meta"><span>Contentious politics</span><span>State–society relations</span><span>Research data infrastructure</span></p>
+      <h3>Social Conflict and State Response in Peru: A Relational Database</h3>
+      <p class="work-card__subtitle">Database in development · 2026–present</p>
+      <p>
+        I am developing a longitudinal relational database of social conflicts documented in the
+        monthly reports of Peru's Defensoría del Pueblo (Ombudsman's Office). The project is designed
+        to connect reported conflict cases over time with information on actors, demands, protest
+        and violence, dialogue and mediation, agreements, and state responses. Its construction
+        emphasizes documentary provenance, original source wording, and explicit treatment of
+        uncertainty. The database is intended to support research on contentious politics, conflict
+        trajectories, and state–society relations in Peru. Data construction and validation are
+        ongoing; a first public release is planned.
+      </p>
+      <a class="text-link" href="https://github.com/Jorge-Zavala-D/peru-conflict-data">Development repository <span aria-hidden="true">→</span></a>
+    </article>
+
+  </div>
+</section>
+
+<section class="research-section">
+  <div class="section-heading">
+    <div>
       <p class="section-kicker">Collaborative work</p>
       <h2>Other projects</h2>
     </div>
