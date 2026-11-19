@@ -223,11 +223,6 @@ nav_order: 1
       <p class="project-facts">Planned N = 1,200 · content-only and AI-tool arms · gender heterogeneity pre-specified</p>
     </article>
     <article>
-      <p class="work-card__meta"><span>Migration</span><span>Nigeria</span></p>
-      <h3>The Myth of the Misinformed Migrant?</h3>
-      <p>Survey insights from Nigeria's irregular-migration epicenter. With Bernd Beber and Alexandra Scacco. Revise and resubmit.</p>
-    </article>
-    <article>
       <p class="work-card__meta"><span>Firm dynamics</span><span>Germany</span></p>
       <h3>Reallocation, Firm Dynamics, and the Advanced-Economy Trap</h3>
       <p>Evidence from German establishment data. With Johar Arrieta.</p>
