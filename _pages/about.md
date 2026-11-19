@@ -5,6 +5,8 @@ permalink: /
 description: Political economist studying conflict, transitional justice, development, and the social legacies of violence.
 ---
 
+{% assign cv = site.data.cv.cv %}
+
 <main class="home-shell">
   <section class="hero">
     <div class="hero__copy">
@@ -26,7 +28,8 @@ description: Political economist studying conflict, transitional justice, develo
         <a class="button button--ghost" href="{{ '/assets/pdf/Jorge_Zavala_CV.pdf' | relative_url | bust_file_cache }}">Download CV</a>
       </div>
       <div class="hero__links" aria-label="Professional links">
-        <a href="mailto:jorge.zavala@wzb.eu">Email</a>
+        <a href="mailto:{{ cv.email }}">WZB email (primary)</a>
+        <a href="mailto:{{ cv.doctoral_email }}">HU student email</a>
         <a href="https://www.wzb.eu/en/persons/jorge-zavala">WZB profile</a>
         <a href="https://www.linkedin.com/in/jorge-zavala-delgado/">LinkedIn</a>
         <a href="https://github.com/Jorge-Zavala-D">GitHub</a>

@@ -9,6 +9,11 @@ for (const route of routes) {
     const response = await page.goto(route);
     expect(response.status()).toBe(200);
     if (route === "/") {
+      await expect(page.getByRole("link", { name: "WZB email (primary)", exact: true })).toHaveAttribute("href", "mailto:jorge.zavala@wzb.eu");
+      await expect(page.getByRole("link", { name: "HU student email", exact: true })).toHaveAttribute(
+        "href",
+        "mailto:jorge.zavala@student.hu-berlin.de"
+      );
       const portrait = page.locator(".hero__portrait img");
       await expect(portrait).toHaveJSProperty("complete", true);
       expect(await portrait.evaluate((img) => img.naturalWidth)).toBeGreaterThan(0);
@@ -35,6 +40,11 @@ for (const route of routes) {
 
 test("CV content and downloads have one authoritative source", async ({ page, request }) => {
   await page.goto("/cv/");
+  await expect(page.getByRole("link", { name: "jorge.zavala@wzb.eu", exact: true })).toHaveAttribute("href", "mailto:jorge.zavala@wzb.eu");
+  await expect(page.getByRole("link", { name: "jorge.zavala@student.hu-berlin.de", exact: true })).toHaveAttribute(
+    "href",
+    "mailto:jorge.zavala@student.hu-berlin.de"
+  );
   await expect(page.locator("body")).toContainText("Alexandra Scacco");
   await expect(page.locator("body")).toContainText("Identifying High-Risk Provinces for Violent Extremism in Burkina Faso Using Machine Learning");
   const sections = await page.locator(".cv-section").evaluateAll((nodes) =>

@@ -24,8 +24,12 @@ description: A concise academic record of education, appointments, research, tea
           <dd>{{ cv.location }}</dd>
         </div>
         <div>
-          <dt>Email</dt>
+          <dt>Primary</dt>
           <dd><a href="mailto:{{ cv.email }}">{{ cv.email }}</a></dd>
+        </div>
+        <div>
+          <dt>HU student</dt>
+          <dd><a href="mailto:{{ cv.doctoral_email }}">{{ cv.doctoral_email }}</a></dd>
         </div>
       </dl>
       <div class="cv-actions">
