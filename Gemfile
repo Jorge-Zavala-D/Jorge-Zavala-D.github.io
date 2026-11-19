@@ -49,7 +49,8 @@ group :al_folio_plugins do
     gem 'al_cookie', '= 1.0.0'
 
     gem 'al_analytics', '= 1.0.0'
-    gem 'al_citations', '= 1.0.1'
+    # Upstream compatibility change only; permits security-patched Active Support 8.
+    gem 'al_citations', '= 1.0.1', git: 'https://github.com/al-org-dev/al-citations.git', ref: 'ef8ab02fbd4f1383d5126616be02afd985f3b355'
     gem 'al_ext_posts', '= 1.0.1'
     gem 'al_search', '= 1.0.2'
     gem 'al_charts', '= 1.0.1'
