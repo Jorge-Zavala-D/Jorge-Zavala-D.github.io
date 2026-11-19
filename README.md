@@ -49,7 +49,7 @@ desktop/mobile accessibility, layout, internal links, CV and publication-boundar
 checks pass. Concurrent releases are serialized. Pages settings use **Deploy from
 branch**, `gh-pages`, `/ (root)`. Keep the root URL and empty `baseurl` in `_config.yml`.
 
-After publishing, the live verification workflow waits for the reviewed CV bytes,
+After publishing, the live verification workflow waits for both reviewed CV PDFs,
 checks the deployed pages and external references, and measures the actual homepage
 and CV with Lighthouse. Websites that block automated requests are reported for
 manual review, not falsely marked verified. Automated checks do not certify WCAG conformance.
@@ -61,21 +61,25 @@ own environment, including its different Python version. See
 
 ## Overleaf-first CV workflow
 
-The single English master is
-`C:\Users\jzava\Dropbox (Personal)\Apps\Overleaf\CV_Jorge Zavala\CV_Jorge Zavala_ENG.tex`,
-with `resume.cls`. Do not keep another editable CV source in this repository.
+Both English masters live in
+`C:\Users\jzava\Dropbox (Personal)\Apps\Overleaf\CV_Jorge Zavala`:
+
+- `CV_Jorge Zavala_ENG.tex` with `resume.cls` → `assets/pdf/Jorge_Zavala_CV.pdf` (Professional CV).
+- `CV_Jorge Zavala_ACADEMIC_ENG.tex` → `assets/pdf/Jorge_Zavala_Academic_CV.pdf` (Academic CV).
+
+Do not keep editable CV copies in this repository.
 
 1. Edit the Overleaf source first.
 2. Run `./scripts/sync-cv.ps1` from this repository. It prefers the installed MiKTeX
    compiler and runs two passes. An explicit `-CompilerPath` also accepts pdflatex,
-   latexmk, or Tectonic. The reviewed PDF is replaced only after compilation and PDF validation.
-3. Inspect `assets/pdf/Jorge_Zavala_CV.pdf`. Logs and the previous PDF remain in ignored
+   latexmk, or Tectonic. Both builds must succeed and pass basic PDF validation before either public file is replaced.
+3. Inspect both PDFs. Logs and any previous public copies remain in ignored
    `output/cv-build/` for review. `./test/sync-cv.Tests.ps1` checks failure protection.
 4. Update `_data/cv.yml` and affected topical pages with the same factual changes.
-5. Validate, commit and push the website changes. Check the live CV download after deployment.
+5. Validate, commit and push the website changes. Check both live downloads after deployment.
 
 The old RenderCV writer is retired. Web CV data is a summary, never a second PDF source.
-The reviewed PDF is intentionally committed so each deployment includes the same CV.
+The reviewed PDFs are intentionally committed so each deployment includes those exact files.
 Compilation success alone does not prove correct document layout.
 
 ## Privacy

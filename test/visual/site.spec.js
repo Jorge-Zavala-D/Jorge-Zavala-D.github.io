@@ -55,9 +55,23 @@ test("CV content and downloads have one authoritative source", async ({ page, re
   );
   expect(sections.length).toBeGreaterThan(0);
   for (const section of sections) expect(section.content.length, `${section.name} must not be empty`).toBeGreaterThan(0);
-  const pdf = await request.get("/assets/pdf/Jorge_Zavala_CV.pdf");
-  expect(pdf.status()).toBe(200);
-  expect((await pdf.body()).subarray(0, 5).toString()).toBe("%PDF-");
+  const downloads = [];
+  for (const [label, filename] of [
+    ["Download Academic CV (PDF)", "Jorge_Zavala_Academic_CV.pdf"],
+    ["Download Professional CV (PDF)", "Jorge_Zavala_CV.pdf"],
+  ]) {
+    const link = page.getByRole("link", { name: label, exact: true });
+    await expect(link).toBeVisible();
+    await expect(link).toHaveAttribute("download", "");
+    const href = await link.getAttribute("href");
+    expect(new URL(href, page.url()).pathname).toBe(`/assets/pdf/${filename}`);
+    const pdf = await request.get(href);
+    expect(pdf.status()).toBe(200);
+    const bytes = await pdf.body();
+    expect(bytes.subarray(0, 5).toString()).toBe("%PDF-");
+    downloads.push(bytes);
+  }
+  expect(downloads[0].equals(downloads[1])).toBe(false);
 });
 
 test("the new work in progress is listed once with consistent public metadata", async ({ page }) => {

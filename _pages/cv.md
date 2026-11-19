@@ -35,14 +35,13 @@ description: A concise academic record of education, appointments, research, tea
       <div class="cv-actions">
         <a
           class="button button--primary"
-          href="{{ '/assets/pdf/Jorge_Zavala_CV.pdf' | relative_url | bust_file_cache }}"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="{{ '/assets/pdf/Jorge_Zavala_Academic_CV.pdf' | relative_url | bust_file_cache }}"
+          download
         >
-          View full CV (PDF)
+          Download Academic CV (PDF)
         </a>
         <a class="cv-actions__text" href="{{ '/assets/pdf/Jorge_Zavala_CV.pdf' | relative_url | bust_file_cache }}" download>
-          Download PDF
+          Download Professional CV (PDF)
         </a>
       </div>
     </div>
