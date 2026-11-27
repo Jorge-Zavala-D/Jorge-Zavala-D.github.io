@@ -2,6 +2,43 @@ const { test, expect } = require("@playwright/test");
 const AxeBuilder = require("@axe-core/playwright").default;
 
 const routes = ["/", "/research/", "/publications/", "/policy/", "/teaching/", "/cv/"];
+
+test("analytics sends the referrer only after opt-in and stops after withdrawal", async ({ page }) => {
+  const tracker = "https://gc.zgo.at/count.v5.js";
+  const endpoint = "https://jorgezavala.goatcounter.com/count";
+  const requests = [];
+  page.on("request", (request) => {
+    if (request.url() === tracker || request.url().startsWith(endpoint)) requests.push(request.url());
+  });
+  // Exercise the visitor path, while intercepting all synthetic counts.
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, "webdriver", { get: () => false });
+    window.goatcounter = { allow_local: true };
+  });
+  await page.route(`${endpoint}**`, (route) => route.fulfill({ status: 202 }));
+  await page.goto("/");
+  const reject = page.getByRole("button", { name: "Reject all", exact: true });
+  await expect(reject).toBeVisible();
+  await expect(page.locator(`script[data-goatcounter="${endpoint}"]`)).toHaveCount(1);
+  expect(requests).toEqual([]);
+  await reject.click();
+  await page.goto("/privacy/", { referer: "https://example.org/" });
+  expect(requests).toEqual([]);
+  const preferences = page.getByRole("button", { name: "Analytics preferences" });
+  await preferences.click();
+  const scriptResponse = page.waitForResponse(tracker);
+  const count = page.waitForRequest((request) => request.url().startsWith(`${endpoint}?`));
+  await page.getByRole("button", { name: "Accept all", exact: true }).click();
+  expect((await scriptResponse).ok()).toBe(true);
+  const visit = new URL((await count).url());
+  expect(visit.searchParams.get("p")).toBe("/privacy/");
+  expect(visit.searchParams.get("r")).toBe("https://example.org/");
+  await preferences.click();
+  await reject.click();
+  await page.goto("/cv/");
+  expect(requests).toEqual([tracker, visit.href]);
+});
+
 for (const route of routes) {
   test(`${route} is accessible and responsive`, async ({ page }, testInfo) => {
     const errors = [];

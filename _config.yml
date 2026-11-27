@@ -15,6 +15,10 @@ footer_text: >
   Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and
   <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a>.
   Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  <a href="/privacy/">Privacy</a>.
+  <script type="text/plain" data-category="analytics" data-goatcounter="https://jorgezavala.goatcounter.com/count"
+  data-src="https://gc.zgo.at/count.v5.js" async crossorigin="anonymous"
+  integrity="sha384-atnOLvQb9t+jTSipvd75X2yginT4PjVbqDdlJAmxMm+wYElFmeR6EmLP5bYeoRVQ"></script>
 keywords: political economy, development economics, political science, conflict, transitional justice, causal inference, Peru
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -461,7 +465,7 @@ lazy_loading_images: true # enables lazy loading of images (recommended)
 
 enable_google_verification: false # enables google site verification
 enable_bing_verification: false # enables bing site verification
-enable_cookie_consent: false # enables GDPR-compliant cookie consent dialog (https://github.com/orestbida/cookieconsent)
+enable_cookie_consent: true # GoatCounter runs only after analytics consent.
 enable_masonry: false # enables automatic project cards arrangement
 enable_math: false # enables math typesetting (uses MathJax)
 enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
